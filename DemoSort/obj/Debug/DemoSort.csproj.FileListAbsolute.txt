@@ -1,0 +1,9 @@
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\bin\Debug\DemoSort.exe
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\bin\Debug\DemoSort.pdb
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.csprojResolveAssemblyReference.cache
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.frmMainDemo.resources
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.Properties.Resources.resources
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.csproj.GenerateResource.Cache
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.exe
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.pdb
+D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.Controls.ctrlsMainApp.resources
