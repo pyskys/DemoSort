@@ -7,3 +7,12 @@ D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\
 D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.exe
 D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.pdb
 D:\Subjects\ProgramGame\ProgramGame\DemoSortV2.0-C#\DemoSort\DemoSort\obj\Debug\DemoSort.Controls.ctrlsMainApp.resources
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.exe
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.pdb
+C:\Users\Skys\Desktop\DemoSort\DemoSort\bin\Debug\DemoSort.exe
+C:\Users\Skys\Desktop\DemoSort\DemoSort\bin\Debug\DemoSort.pdb
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.csprojResolveAssemblyReference.cache
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.Controls.ctrlsMainApp.resources
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.frmMainDemo.resources
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.Properties.Resources.resources
+C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.csproj.GenerateResource.Cache

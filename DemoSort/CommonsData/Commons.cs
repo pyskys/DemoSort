@@ -74,5 +74,14 @@ namespace DemoSort.CommonsData
 
             }).Start();
         }
+
+        public static void ColorClickEffect(Button btn, Color clr1, Color clr2,int iSleep = 150)
+        {
+         new Thread(()=>{
+             btn.BackColor = clr2;
+             Thread.Sleep(iSleep);
+             btn.BackColor = clr1;
+         }).Start();
+        }
     }
 }

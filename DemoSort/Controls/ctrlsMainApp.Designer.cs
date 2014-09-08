@@ -29,12 +29,26 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcute = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.pnlControls = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSort1 = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRandoms = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lbBubble = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,11 +66,25 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBubble = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pnlSort2 = new System.Windows.Forms.Panel();
+            this.btnSort2 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.pnlControls.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlBubble.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.pnlSort2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -64,24 +92,24 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Indigo;
-            this.textBox1.Location = new System.Drawing.Point(-3, 365);
+            this.textBox1.Location = new System.Drawing.Point(-3, 525);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(119, 21);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "10";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // btnExcute
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(-2, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Excute";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExcute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcute.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcute.ForeColor = System.Drawing.Color.Green;
+            this.btnExcute.Location = new System.Drawing.Point(-2, -1);
+            this.btnExcute.Name = "btnExcute";
+            this.btnExcute.Size = new System.Drawing.Size(119, 31);
+            this.btnExcute.TabIndex = 0;
+            this.btnExcute.Text = "Excute";
+            this.btnExcute.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -91,18 +119,18 @@
             this.panel4.Size = new System.Drawing.Size(235, 2);
             this.panel4.TabIndex = 14;
             // 
-            // button3
+            // btnPause
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Green;
-            this.button3.Location = new System.Drawing.Point(-2, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 31);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Pause";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
+            this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPause.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPause.ForeColor = System.Drawing.Color.Green;
+            this.btnPause.Location = new System.Drawing.Point(-2, 28);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(119, 31);
+            this.btnPause.TabIndex = 4;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -111,7 +139,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label10.Location = new System.Drawing.Point(-2, 350);
+            this.label10.Location = new System.Drawing.Point(-2, 510);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 3;
@@ -124,28 +152,191 @@
             this.pnlControls.BackColor = System.Drawing.Color.Indigo;
             this.pnlControls.BackgroundImage = global::DemoSort.Properties.Resources.Untitled_2;
             this.pnlControls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlControls.Controls.Add(this.button3);
+            this.pnlControls.Controls.Add(this.btnPause);
+            this.pnlControls.Controls.Add(this.panel3);
             this.pnlControls.Controls.Add(this.label10);
             this.pnlControls.Controls.Add(this.textBox1);
-            this.pnlControls.Controls.Add(this.button2);
-            this.pnlControls.Controls.Add(this.button1);
+            this.pnlControls.Controls.Add(this.btnRandoms);
+            this.pnlControls.Controls.Add(this.btnExcute);
             this.pnlControls.Location = new System.Drawing.Point(490, 0);
             this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(120, 420);
+            this.pnlControls.Size = new System.Drawing.Size(120, 580);
             this.pnlControls.TabIndex = 7;
             // 
-            // button2
+            // panel3
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Green;
-            this.button2.Location = new System.Drawing.Point(-2, 386);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 31);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Random";
-            this.button2.UseVisualStyleBackColor = true;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.pnlSort2);
+            this.panel3.Controls.Add(this.btnSort1);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(0, 57);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(115, 422);
+            this.panel3.TabIndex = 5;
+            // 
+            // btnSort1
+            // 
+            this.btnSort1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSort1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSort1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSort1.ForeColor = System.Drawing.Color.Green;
+            this.btnSort1.Location = new System.Drawing.Point(-1, 0);
+            this.btnSort1.Name = "btnSort1";
+            this.btnSort1.Size = new System.Drawing.Size(119, 23);
+            this.btnSort1.TabIndex = 17;
+            this.btnSort1.Text = "Sort 1";
+            this.btnSort1.UseVisualStyleBackColor = false;
+            this.btnSort1.Click += new System.EventHandler(this.btnSort1_Click);
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label21.Location = new System.Drawing.Point(3, 397);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(111, 23);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Shake Sort";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label22.Image = global::DemoSort.Properties.Resources.icon4;
+            this.label22.Location = new System.Drawing.Point(34, 362);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(43, 30);
+            this.label22.TabIndex = 15;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label19.Location = new System.Drawing.Point(2, 200);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(111, 23);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "BiInsertion Sort";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label20.Image = global::DemoSort.Properties.Resources.icon2;
+            this.label20.Location = new System.Drawing.Point(34, 164);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 30);
+            this.label20.TabIndex = 13;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label17.Location = new System.Drawing.Point(2, 329);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(111, 23);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Bubble Sort";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label15.Location = new System.Drawing.Point(2, 265);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(111, 23);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Interchange Sort";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label13.Location = new System.Drawing.Point(2, 133);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 23);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Insertion Sort";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label18.Image = global::DemoSort.Properties.Resources.icon3;
+            this.label18.Location = new System.Drawing.Point(34, 296);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 30);
+            this.label18.TabIndex = 9;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label16.Image = global::DemoSort.Properties.Resources.icon2;
+            this.label16.Location = new System.Drawing.Point(34, 230);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 30);
+            this.label16.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label14.Image = global::DemoSort.Properties.Resources.icon2;
+            this.label14.Location = new System.Drawing.Point(34, 98);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 30);
+            this.label14.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.Location = new System.Drawing.Point(1, 67);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 23);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Selection Sort";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Image = global::DemoSort.Properties.Resources.icon1;
+            this.label1.Location = new System.Drawing.Point(34, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 30);
+            this.label1.TabIndex = 3;
+            // 
+            // btnRandoms
+            // 
+            this.btnRandoms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRandoms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRandoms.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRandoms.ForeColor = System.Drawing.Color.Green;
+            this.btnRandoms.Location = new System.Drawing.Point(-2, 546);
+            this.btnRandoms.Name = "btnRandoms";
+            this.btnRandoms.Size = new System.Drawing.Size(119, 31);
+            this.btnRandoms.TabIndex = 1;
+            this.btnRandoms.Text = "Random";
+            this.btnRandoms.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -292,7 +483,7 @@
             this.panel1.Controls.Add(this.lbBubble);
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 389);
+            this.panel1.Size = new System.Drawing.Size(490, 548);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -309,7 +500,7 @@
             this.pnlBubble.Controls.Add(this.label2);
             this.pnlBubble.Location = new System.Drawing.Point(185, 26);
             this.pnlBubble.Name = "pnlBubble";
-            this.pnlBubble.Size = new System.Drawing.Size(289, 126);
+            this.pnlBubble.Size = new System.Drawing.Size(289, 62);
             this.pnlBubble.TabIndex = 0;
             // 
             // menuStrip1
@@ -318,11 +509,149 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.demoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 420);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 580);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(610, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pnlSort2
+            // 
+            this.pnlSort2.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSort2.Controls.Add(this.btnSort2);
+            this.pnlSort2.Controls.Add(this.label25);
+            this.pnlSort2.Controls.Add(this.label26);
+            this.pnlSort2.Controls.Add(this.label27);
+            this.pnlSort2.Controls.Add(this.label28);
+            this.pnlSort2.Controls.Add(this.label29);
+            this.pnlSort2.Controls.Add(this.label30);
+            this.pnlSort2.Controls.Add(this.label31);
+            this.pnlSort2.Controls.Add(this.label32);
+            this.pnlSort2.Controls.Add(this.label33);
+            this.pnlSort2.Controls.Add(this.label34);
+            this.pnlSort2.Location = new System.Drawing.Point(0, 22);
+            this.pnlSort2.Name = "pnlSort2";
+            this.pnlSort2.Size = new System.Drawing.Size(115, 397);
+            this.pnlSort2.TabIndex = 18;
+            // 
+            // btnSort2
+            // 
+            this.btnSort2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSort2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSort2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSort2.ForeColor = System.Drawing.Color.Green;
+            this.btnSort2.Location = new System.Drawing.Point(-1, 0);
+            this.btnSort2.Name = "btnSort2";
+            this.btnSort2.Size = new System.Drawing.Size(119, 23);
+            this.btnSort2.TabIndex = 17;
+            this.btnSort2.Text = "Sort 2";
+            this.btnSort2.UseVisualStyleBackColor = false;
+            this.btnSort2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSort2_MouseClick);
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label25.Location = new System.Drawing.Point(2, 200);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(111, 23);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "Quick Sort";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label26.Image = global::DemoSort.Properties.Resources.icon2;
+            this.label26.Location = new System.Drawing.Point(34, 164);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(43, 30);
+            this.label26.TabIndex = 13;
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label27.Location = new System.Drawing.Point(2, 329);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(111, 23);
+            this.label27.TabIndex = 12;
+            this.label27.Text = "Radix Sort";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label28.Location = new System.Drawing.Point(2, 265);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(111, 23);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "Merge Sort";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label29
+            // 
+            this.label29.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label29.Location = new System.Drawing.Point(2, 133);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(111, 23);
+            this.label29.TabIndex = 10;
+            this.label29.Text = "Shell Sort";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label30.Image = global::DemoSort.Properties.Resources.icon8;
+            this.label30.Location = new System.Drawing.Point(34, 296);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(43, 30);
+            this.label30.TabIndex = 9;
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label31.Image = global::DemoSort.Properties.Resources.icon7;
+            this.label31.Location = new System.Drawing.Point(34, 230);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(43, 30);
+            this.label31.TabIndex = 7;
+            // 
+            // label32
+            // 
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label32.Image = global::DemoSort.Properties.Resources.icon6;
+            this.label32.Location = new System.Drawing.Point(34, 98);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(43, 30);
+            this.label32.TabIndex = 5;
+            // 
+            // label33
+            // 
+            this.label33.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label33.Location = new System.Drawing.Point(1, 67);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(111, 23);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "Heap Sort";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label34
+            // 
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label34.Image = global::DemoSort.Properties.Resources.icon5;
+            this.label34.Location = new System.Drawing.Point(34, 32);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(43, 30);
+            this.label34.TabIndex = 3;
             // 
             // ctrlsMainApp
             // 
@@ -333,15 +662,17 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ctrlsMainApp";
-            this.Size = new System.Drawing.Size(610, 444);
+            this.Size = new System.Drawing.Size(610, 604);
             this.pnlControls.ResumeLayout(false);
             this.pnlControls.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.pnlBubble.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnlSort2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,12 +681,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcute;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel pnlControls;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRandoms;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbBubble;
         private System.Windows.Forms.Label label9;
@@ -373,5 +704,31 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlBubble;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnSort1;
+        private System.Windows.Forms.Panel pnlSort2;
+        private System.Windows.Forms.Button btnSort2;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
     }
 }
