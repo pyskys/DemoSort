@@ -52,6 +52,12 @@
     <Compile Include="Controls\ctrlsMainApp.Designer.cs">
       <DependentUpon>ctrlsMainApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Elements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Elements.Designer.cs">
+      <DependentUpon>Elements.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\ctrlsMainApp.resx">
       <DependentUpon>ctrlsMainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Elements.resx">
+      <DependentUpon>Elements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainDemo.resx">
       <DependentUpon>frmMainDemo.cs</DependentUpon>
@@ -167,6 +176,96 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btn3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

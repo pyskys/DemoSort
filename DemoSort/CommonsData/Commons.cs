@@ -38,6 +38,8 @@ namespace DemoSort.CommonsData
             iYAdd = iYAdd < 1 ? 1 : iYAdd;
 
             int iNext = 1;
+
+            //Gọi hàm detail
             MovePanelDetail(pnl, XFinish, YFinish, iSleep, iDefaultDistance, iNext, iXAdd, iYAdd);
         }
         /// <summary>

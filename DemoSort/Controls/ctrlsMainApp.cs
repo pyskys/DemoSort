@@ -24,6 +24,7 @@ namespace DemoSort.Controls
         //Lưu vị trí hiện hành của control tạo hiệu ứng
         Point pEff;
 
+        List<Elements> lstElementsArray = new List<Elements>();
         public ctrlsMainApp()
         {
             InitializeComponent();
@@ -88,39 +89,6 @@ namespace DemoSort.Controls
               }
             //////////////////////////////////////////////////////////////
         }
-
-        private void MoveSortPage()
-        {
-            //Nếu Sort 2 đang show
-            if (bShowSort1)
-            {
-                //Ẩn hình ảnh trên Sort 2 đi chống lag hình ảnh bên Sort 1
-                foreach (Control item in pnlSort2.Controls)
-                {
-                    if (item.GetType() == typeof(Label))
-                        item.Visible = false;
-                }
-
-                //Move Sort 2 vào
-                Commons.MovePanelDetail(pnlSort2, pnlSort2.Location.X, this.Height - 108, 20, 0, 1, 20, 20);
-
-                new Thread(() =>
-                {
-                    //Hiện hình ảnh trên Sort 2 ra
-                    Thread.Sleep(1000);
-                    foreach (Control item in pnlSort2.Controls)
-                    {
-                        if (item.GetType() == typeof(Label))
-                            item.Visible = true;
-                    }
-                }).Start();
-            }
-            else
-                //Nếu Sort 1 đang show
-                //Move Sort 2 ra
-                Commons.MovePanelDetail(pnlSort2, pnlSort2.Location.X, btnSort1.Location.Y + 22, 20, 30, 1, 20, 20);
-            bShowSort1 = !bShowSort1;
-        }
         void ctrlsMainApp_SizeChanged(object sender, EventArgs e)
         {
             //Sort 2 đang show
@@ -154,6 +122,7 @@ namespace DemoSort.Controls
         {
             Label lb = (Label)sender;
             String str = (String)lb.Tag;
+
             //Chỉ xử lý cho những label có hình ảnh (icon sort)
             if (str == null) return;
 
@@ -190,10 +159,10 @@ namespace DemoSort.Controls
         {
             if (bShowPanelBubble)
                 //Duy chuyển ra
-                Commons.MovePanel(pnlBubble, this.Width - 371, pnlBubble.Location.Y, 10);
+                Commons.MovePanelDetail(pnlBubble, this.Width - 450, pnlBubble.Location.Y,10,50,1,10,10);
             else
                 //Di chuyển vô
-                Commons.MovePanel(pnlBubble, this.Width - 120, pnlBubble.Location.Y, 10);
+                Commons.MovePanelDetail(pnlBubble, this.Width - 120, pnlBubble.Location.Y,10,50,1,10,10);
 
             bShowPanelBubble = !bShowPanelBubble;
         }
@@ -202,7 +171,31 @@ namespace DemoSort.Controls
             Button btn = (Button) sender;
             Commons.ColorClickEffect(btn, btn.BackColor, Color.DarkOrange);
 
-            MoveSortPage();
+            //Nếu Sort 2 đang show
+            if (bShowSort1)
+            {
+                //Ẩn hình ảnh trên Sort 2 đi chống lag hình ảnh bên Sort 1
+                foreach (Control item in pnlSort2.Controls)
+                {
+                    if (item.GetType() == typeof(Label))
+                        item.Visible = false;
+                }
+
+                //Move Sort 2 vào
+                Commons.MovePanelDetail(pnlSort2, pnlSort2.Location.X, this.Height - 108, 20, 0, 1, 20, 20);
+                bShowSort1 = false;
+
+                new Thread(() =>
+                {
+                    //Hiện hình ảnh trên Sort 2 ra
+                    Thread.Sleep(1000);
+                    foreach (Control item in pnlSort2.Controls)
+                    {
+                        if (item.GetType() == typeof(Label))
+                            item.Visible = true;
+                    }
+                }).Start();
+            }
         }
 
         private void btnSort2_MouseClick(object sender, MouseEventArgs e)
@@ -241,7 +234,13 @@ namespace DemoSort.Controls
 
         private void btnSort2_Click(object sender, EventArgs e)
         {
-            MoveSortPage();
+            if (!bShowSort1)
+            { 
+                //Nếu Sort 1 đang show
+                //Move Sort 2 ra
+                Commons.MovePanelDetail(pnlSort2, pnlSort2.Location.X, btnSort1.Location.Y + 22, 20, 30, 1, 20, 20);
+                bShowSort1 = true;
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -293,6 +292,51 @@ namespace DemoSort.Controls
                     ctrlsEff.Location = new Point(pEff.X , pEff.Y);
                     iNext = 5;
                     break;
+            }
+        }
+        private List<Elements> lstAllElementApp = new List<Elements>();
+        private void RemoveAllElement()
+        {
+            foreach (Elements item in lstAllElementApp)
+            {
+                pnlArray.Controls.Remove(item);
+            }
+            lstAllElementApp.Clear();
+            lstElementsArray.Clear();
+        }
+        public Elements GetElement(String strText, int x, int y,Bitmap bit)
+        {
+            Elements el = new Elements(strText,
+                   x, y,
+                   bit
+                   );
+
+            //Luu lai de Remove
+            lstAllElementApp.Add(el);
+            return el;
+        }
+        Random ran = new Random();
+        private int RandomNumber(int iStart, int iEnd)
+        {
+            
+            return ran.Next(iStart, iEnd);
+        }
+        private void btnRandoms_Click(object sender, EventArgs e)
+        {
+            //Xóa các phần tử củ trước
+            RemoveAllElement();
+
+            int iNumber = int.Parse(txtSize.Text.Trim());
+            int iXArray = pnlArray.Width/2 -150;
+            int iYArray = pnlArray.Height / 2 - 100;
+            for (int i = 0; i < iNumber; i++)
+            {
+                int iRandom = RandomNumber(0,i*3);
+                Elements el = GetElement(iRandom.ToString(), iXArray, iYArray, (Bitmap)lbBubble.Image);
+                iXArray += 40;
+
+                lstElementsArray.Add(el);
+                pnlArray.Controls.Add(el);
             }
         }
     }

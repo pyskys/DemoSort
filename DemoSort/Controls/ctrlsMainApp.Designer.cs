@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlsMainApp));
+            this.txtSize = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.btnRandoms = new System.Windows.Forms.Button();
@@ -38,11 +39,18 @@
             this.acessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlArray = new System.Windows.Forms.Panel();
+            this.pnlElements = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlBubble = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pnlElements = new System.Windows.Forms.Panel();
-            this.btnElements = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.btnPause = new System.Windows.Forms.Button();
             this.pnlSort1 = new System.Windows.Forms.Panel();
@@ -73,45 +81,65 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcute = new System.Windows.Forms.Button();
             this.lbIconSmall = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnElements = new System.Windows.Forms.Button();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lbBubble = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlArray.SuspendLayout();
+            this.pnlElements.SuspendLayout();
             this.pnlBubble.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.pnlElements.SuspendLayout();
             this.pnlControls.SuspendLayout();
             this.pnlSort1.SuspendLayout();
             this.pnlSort2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtSize
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Indigo;
-            this.textBox1.Location = new System.Drawing.Point(29, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 21);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "10";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSize.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSize.ForeColor = System.Drawing.Color.Indigo;
+            this.txtSize.Location = new System.Drawing.Point(29, 21);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(117, 21);
+            this.txtSize.TabIndex = 2;
+            this.txtSize.Text = "10";
+            this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(15, 39);
+            this.panel4.Location = new System.Drawing.Point(21, 55);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 2);
+            this.panel4.Size = new System.Drawing.Size(305, 2);
             this.panel4.TabIndex = 14;
             // 
             // label10
@@ -137,6 +165,7 @@
             this.btnRandoms.TabIndex = 1;
             this.btnRandoms.Text = "Random";
             this.btnRandoms.UseVisualStyleBackColor = true;
+            this.btnRandoms.Click += new System.EventHandler(this.btnRandoms_Click);
             // 
             // panel2
             // 
@@ -148,7 +177,7 @@
             this.panel2.Controls.Add(this.lbTextSort);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 31);
+            this.panel2.Size = new System.Drawing.Size(580, 31);
             this.panel2.TabIndex = 6;
             // 
             // lbTextSort
@@ -187,36 +216,106 @@
             this.demoToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.demoToolStripMenuItem.Text = "Demo";
             // 
-            // panel1
+            // pnlArray
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlArray.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pnlElements);
-            this.panel1.Controls.Add(this.pnlBubble);
-            this.panel1.Controls.Add(this.lbBubble);
-            this.panel1.Location = new System.Drawing.Point(0, 31);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(490, 548);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlArray.BackColor = System.Drawing.Color.Black;
+            this.pnlArray.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlArray.Controls.Add(this.pnlElements);
+            this.pnlArray.Controls.Add(this.pnlBubble);
+            this.pnlArray.Controls.Add(this.lbBubble);
+            this.pnlArray.Location = new System.Drawing.Point(0, 31);
+            this.pnlArray.Name = "pnlArray";
+            this.pnlArray.Size = new System.Drawing.Size(580, 549);
+            this.pnlArray.TabIndex = 4;
+            this.pnlArray.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pnlElements
+            // 
+            this.pnlElements.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlElements.Controls.Add(this.linkLabel2);
+            this.pnlElements.Controls.Add(this.btnElements);
+            this.pnlElements.Controls.Add(this.linkLabel1);
+            this.pnlElements.Controls.Add(this.label10);
+            this.pnlElements.Controls.Add(this.btnRandoms);
+            this.pnlElements.Controls.Add(this.txtSize);
+            this.pnlElements.Location = new System.Drawing.Point(359, 390);
+            this.pnlElements.Name = "pnlElements";
+            this.pnlElements.Size = new System.Drawing.Size(171, 87);
+            this.pnlElements.TabIndex = 2;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.Orange;
+            this.linkLabel2.Location = new System.Drawing.Point(122, 2);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(26, 15);
+            this.linkLabel2.TabIndex = 4;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Input";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabel2.MouseHover += new System.EventHandler(this.linkLabel2_MouseHover);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Orange;
+            this.linkLabel1.Location = new System.Drawing.Point(76, 2);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(27, 15);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Load";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.MouseHover += new System.EventHandler(this.linkLabel1_MouseHover);
             // 
             // pnlBubble
             // 
             this.pnlBubble.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBubble.Controls.Add(this.panel4);
-            this.pnlBubble.Controls.Add(this.label9);
-            this.pnlBubble.Controls.Add(this.label7);
+            this.pnlBubble.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBubble.Controls.Add(this.label53);
+            this.pnlBubble.Controls.Add(this.label52);
+            this.pnlBubble.Controls.Add(this.label51);
+            this.pnlBubble.Controls.Add(this.label50);
+            this.pnlBubble.Controls.Add(this.label49);
+            this.pnlBubble.Controls.Add(this.label44);
+            this.pnlBubble.Controls.Add(this.label45);
+            this.pnlBubble.Controls.Add(this.label46);
+            this.pnlBubble.Controls.Add(this.label47);
+            this.pnlBubble.Controls.Add(this.label48);
+            this.pnlBubble.Controls.Add(this.panel6);
+            this.pnlBubble.Controls.Add(this.label39);
+            this.pnlBubble.Controls.Add(this.label40);
+            this.pnlBubble.Controls.Add(this.label41);
+            this.pnlBubble.Controls.Add(this.label42);
+            this.pnlBubble.Controls.Add(this.label43);
+            this.pnlBubble.Controls.Add(this.panel5);
+            this.pnlBubble.Controls.Add(this.label24);
+            this.pnlBubble.Controls.Add(this.label35);
+            this.pnlBubble.Controls.Add(this.label36);
+            this.pnlBubble.Controls.Add(this.label37);
+            this.pnlBubble.Controls.Add(this.label38);
+            this.pnlBubble.Controls.Add(this.panel3);
             this.pnlBubble.Controls.Add(this.label6);
+            this.pnlBubble.Controls.Add(this.label7);
+            this.pnlBubble.Controls.Add(this.label9);
+            this.pnlBubble.Controls.Add(this.label11);
+            this.pnlBubble.Controls.Add(this.label23);
+            this.pnlBubble.Controls.Add(this.panel1);
             this.pnlBubble.Controls.Add(this.label5);
             this.pnlBubble.Controls.Add(this.label4);
             this.pnlBubble.Controls.Add(this.label3);
             this.pnlBubble.Controls.Add(this.label2);
-            this.pnlBubble.Location = new System.Drawing.Point(185, 26);
+            this.pnlBubble.Controls.Add(this.label8);
+            this.pnlBubble.Controls.Add(this.panel4);
+            this.pnlBubble.Location = new System.Drawing.Point(137, 44);
             this.pnlBubble.Name = "pnlBubble";
-            this.pnlBubble.Size = new System.Drawing.Size(289, 62);
+            this.pnlBubble.Size = new System.Drawing.Size(411, 275);
             this.pnlBubble.TabIndex = 0;
             // 
             // menuStrip1
@@ -227,39 +326,47 @@
             this.demoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 580);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(610, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(700, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // pnlElements
+            // timer1
             // 
-            this.pnlElements.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlElements.Controls.Add(this.linkLabel2);
-            this.pnlElements.Controls.Add(this.btnElements);
-            this.pnlElements.Controls.Add(this.linkLabel1);
-            this.pnlElements.Controls.Add(this.label10);
-            this.pnlElements.Controls.Add(this.btnRandoms);
-            this.pnlElements.Controls.Add(this.textBox1);
-            this.pnlElements.Location = new System.Drawing.Point(269, 389);
-            this.pnlElements.Name = "pnlElements";
-            this.pnlElements.Size = new System.Drawing.Size(171, 87);
-            this.pnlElements.TabIndex = 2;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnElements
+            // panel1
             // 
-            this.btnElements.BackColor = System.Drawing.Color.Transparent;
-            this.btnElements.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnElements.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElements.ForeColor = System.Drawing.Color.Green;
-            this.btnElements.Image = global::DemoSort.Properties.Resources.btn1;
-            this.btnElements.Location = new System.Drawing.Point(3, 4);
-            this.btnElements.Name = "btnElements";
-            this.btnElements.Size = new System.Drawing.Size(23, 73);
-            this.btnElements.TabIndex = 18;
-            this.btnElements.UseVisualStyleBackColor = false;
-            this.btnElements.Click += new System.EventHandler(this.btnElements_Click);
-            this.btnElements.MouseLeave += new System.EventHandler(this.btnElements_MouseLeave);
-            this.btnElements.MouseHover += new System.EventHandler(this.btnElements_MouseHover);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(21, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(305, 2);
+            this.panel1.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(21, 152);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(305, 2);
+            this.panel3.TabIndex = 26;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(21, 201);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(305, 2);
+            this.panel5.TabIndex = 32;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(21, 250);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(305, 2);
+            this.panel6.TabIndex = 38;
             // 
             // pnlControls
             // 
@@ -271,7 +378,7 @@
             this.pnlControls.Controls.Add(this.btnPause);
             this.pnlControls.Controls.Add(this.pnlSort1);
             this.pnlControls.Controls.Add(this.btnExcute);
-            this.pnlControls.Location = new System.Drawing.Point(490, 0);
+            this.pnlControls.Location = new System.Drawing.Point(580, 0);
             this.pnlControls.Name = "pnlControls";
             this.pnlControls.Size = new System.Drawing.Size(120, 580);
             this.pnlControls.TabIndex = 7;
@@ -626,114 +733,302 @@
             this.lbIconSmall.Size = new System.Drawing.Size(27, 29);
             this.lbIconSmall.TabIndex = 2;
             // 
-            // label9
+            // btnElements
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Image = global::DemoSort.Properties.Resources.b1;
-            this.label9.Location = new System.Drawing.Point(11, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 23);
-            this.label9.TabIndex = 2;
+            this.btnElements.BackColor = System.Drawing.Color.Transparent;
+            this.btnElements.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnElements.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnElements.ForeColor = System.Drawing.Color.Green;
+            this.btnElements.Image = global::DemoSort.Properties.Resources.btn1;
+            this.btnElements.Location = new System.Drawing.Point(3, 4);
+            this.btnElements.Name = "btnElements";
+            this.btnElements.Size = new System.Drawing.Size(23, 73);
+            this.btnElements.TabIndex = 18;
+            this.btnElements.UseVisualStyleBackColor = false;
+            this.btnElements.Click += new System.EventHandler(this.btnElements_Click);
+            this.btnElements.MouseLeave += new System.EventHandler(this.btnElements_MouseLeave);
+            this.btnElements.MouseHover += new System.EventHandler(this.btnElements_MouseHover);
             // 
-            // label7
+            // label53
             // 
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Image = global::DemoSort.Properties.Resources.b7;
-            this.label7.Location = new System.Drawing.Point(221, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 23);
-            this.label7.TabIndex = 13;
+            this.label53.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label53.Image = global::DemoSort.Properties.Resources.ball30;
+            this.label53.Location = new System.Drawing.Point(287, 206);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(49, 41);
+            this.label53.TabIndex = 48;
+            // 
+            // label52
+            // 
+            this.label52.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label52.Image = global::DemoSort.Properties.Resources.ball29;
+            this.label52.Location = new System.Drawing.Point(287, 157);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(49, 41);
+            this.label52.TabIndex = 47;
+            // 
+            // label51
+            // 
+            this.label51.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label51.Image = global::DemoSort.Properties.Resources.ball28;
+            this.label51.Location = new System.Drawing.Point(287, 109);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(49, 41);
+            this.label51.TabIndex = 46;
+            // 
+            // label50
+            // 
+            this.label50.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label50.Image = global::DemoSort.Properties.Resources.ball27;
+            this.label50.Location = new System.Drawing.Point(287, 60);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(49, 41);
+            this.label50.TabIndex = 45;
+            // 
+            // label49
+            // 
+            this.label49.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label49.Image = global::DemoSort.Properties.Resources.ball26;
+            this.label49.Location = new System.Drawing.Point(287, 11);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(49, 41);
+            this.label49.TabIndex = 44;
+            // 
+            // label44
+            // 
+            this.label44.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label44.Image = global::DemoSort.Properties.Resources.ball25;
+            this.label44.Location = new System.Drawing.Point(232, 206);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(49, 41);
+            this.label44.TabIndex = 43;
+            // 
+            // label45
+            // 
+            this.label45.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label45.Image = global::DemoSort.Properties.Resources.ball24;
+            this.label45.Location = new System.Drawing.Point(177, 206);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(49, 41);
+            this.label45.TabIndex = 42;
+            // 
+            // label46
+            // 
+            this.label46.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label46.Image = global::DemoSort.Properties.Resources.ball23;
+            this.label46.Location = new System.Drawing.Point(122, 206);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(49, 41);
+            this.label46.TabIndex = 41;
+            // 
+            // label47
+            // 
+            this.label47.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label47.Image = global::DemoSort.Properties.Resources.ball22;
+            this.label47.Location = new System.Drawing.Point(67, 206);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(49, 41);
+            this.label47.TabIndex = 40;
+            // 
+            // label48
+            // 
+            this.label48.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label48.Image = global::DemoSort.Properties.Resources.ball21;
+            this.label48.Location = new System.Drawing.Point(12, 206);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(49, 41);
+            this.label48.TabIndex = 39;
+            // 
+            // label39
+            // 
+            this.label39.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label39.Image = global::DemoSort.Properties.Resources.ball20;
+            this.label39.Location = new System.Drawing.Point(232, 157);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(49, 41);
+            this.label39.TabIndex = 37;
+            // 
+            // label40
+            // 
+            this.label40.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label40.Image = global::DemoSort.Properties.Resources.ball19;
+            this.label40.Location = new System.Drawing.Point(177, 157);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(49, 41);
+            this.label40.TabIndex = 36;
+            // 
+            // label41
+            // 
+            this.label41.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label41.Image = global::DemoSort.Properties.Resources.ball18;
+            this.label41.Location = new System.Drawing.Point(122, 157);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(49, 41);
+            this.label41.TabIndex = 35;
+            // 
+            // label42
+            // 
+            this.label42.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label42.Image = global::DemoSort.Properties.Resources.ball17;
+            this.label42.Location = new System.Drawing.Point(67, 157);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(49, 41);
+            this.label42.TabIndex = 34;
+            // 
+            // label43
+            // 
+            this.label43.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label43.Image = global::DemoSort.Properties.Resources.ball16;
+            this.label43.Location = new System.Drawing.Point(12, 157);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(49, 41);
+            this.label43.TabIndex = 33;
+            // 
+            // label24
+            // 
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label24.Image = global::DemoSort.Properties.Resources.ball15;
+            this.label24.Location = new System.Drawing.Point(232, 109);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(49, 41);
+            this.label24.TabIndex = 31;
+            // 
+            // label35
+            // 
+            this.label35.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label35.Image = global::DemoSort.Properties.Resources.ball14;
+            this.label35.Location = new System.Drawing.Point(177, 109);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(49, 41);
+            this.label35.TabIndex = 30;
+            // 
+            // label36
+            // 
+            this.label36.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label36.Image = global::DemoSort.Properties.Resources.ball13;
+            this.label36.Location = new System.Drawing.Point(122, 109);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(49, 41);
+            this.label36.TabIndex = 29;
+            // 
+            // label37
+            // 
+            this.label37.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label37.Image = global::DemoSort.Properties.Resources.ball12;
+            this.label37.Location = new System.Drawing.Point(67, 109);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(49, 41);
+            this.label37.TabIndex = 28;
+            // 
+            // label38
+            // 
+            this.label38.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label38.Image = global::DemoSort.Properties.Resources.ball11;
+            this.label38.Location = new System.Drawing.Point(12, 109);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(49, 41);
+            this.label38.TabIndex = 27;
             // 
             // label6
             // 
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Image = global::DemoSort.Properties.Resources.b6;
-            this.label6.Location = new System.Drawing.Point(186, 11);
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.Location = new System.Drawing.Point(232, 60);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 23);
-            this.label6.TabIndex = 11;
+            this.label6.Size = new System.Drawing.Size(49, 41);
+            this.label6.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Image = global::DemoSort.Properties.Resources.ball9;
+            this.label7.Location = new System.Drawing.Point(177, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 41);
+            this.label7.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Image = global::DemoSort.Properties.Resources.ball8;
+            this.label9.Location = new System.Drawing.Point(122, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 41);
+            this.label9.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Image = global::DemoSort.Properties.Resources.ball7;
+            this.label11.Location = new System.Drawing.Point(67, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 41);
+            this.label11.TabIndex = 22;
+            // 
+            // label23
+            // 
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label23.Image = global::DemoSort.Properties.Resources.ball6;
+            this.label23.Location = new System.Drawing.Point(12, 60);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(49, 41);
+            this.label23.TabIndex = 21;
             // 
             // label5
             // 
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Image = global::DemoSort.Properties.Resources.b5;
-            this.label5.Location = new System.Drawing.Point(151, 11);
+            this.label5.Image = global::DemoSort.Properties.Resources.ball5;
+            this.label5.Location = new System.Drawing.Point(232, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 23);
-            this.label5.TabIndex = 9;
+            this.label5.Size = new System.Drawing.Size(49, 41);
+            this.label5.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Image = global::DemoSort.Properties.Resources.b4;
-            this.label4.Location = new System.Drawing.Point(116, 11);
+            this.label4.Image = global::DemoSort.Properties.Resources.ball4;
+            this.label4.Location = new System.Drawing.Point(177, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 23);
-            this.label4.TabIndex = 7;
+            this.label4.Size = new System.Drawing.Size(49, 41);
+            this.label4.TabIndex = 18;
             // 
             // label3
             // 
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Image = global::DemoSort.Properties.Resources.b3;
-            this.label3.Location = new System.Drawing.Point(81, 11);
+            this.label3.Image = global::DemoSort.Properties.Resources.ball3;
+            this.label3.Location = new System.Drawing.Point(122, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 23);
-            this.label3.TabIndex = 5;
+            this.label3.Size = new System.Drawing.Size(49, 41);
+            this.label3.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Image = global::DemoSort.Properties.Resources.b2;
-            this.label2.Location = new System.Drawing.Point(46, 11);
+            this.label2.Image = global::DemoSort.Properties.Resources.ball2;
+            this.label2.Location = new System.Drawing.Point(67, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 23);
-            this.label2.TabIndex = 3;
+            this.label2.Size = new System.Drawing.Size(49, 41);
+            this.label2.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Image = global::DemoSort.Properties.Resources.ball1;
+            this.label8.Location = new System.Drawing.Point(12, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 41);
+            this.label8.TabIndex = 15;
             // 
             // lbBubble
             // 
             this.lbBubble.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbBubble.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbBubble.Image = global::DemoSort.Properties.Resources.b1;
-            this.lbBubble.Location = new System.Drawing.Point(460, 0);
+            this.lbBubble.Image = global::DemoSort.Properties.Resources.ball5;
+            this.lbBubble.Location = new System.Drawing.Point(534, 1);
             this.lbBubble.Name = "lbBubble";
-            this.lbBubble.Size = new System.Drawing.Size(29, 23);
+            this.lbBubble.Size = new System.Drawing.Size(48, 40);
             this.lbBubble.TabIndex = 1;
             this.lbBubble.Click += new System.EventHandler(this.lbBubble_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Orange;
-            this.linkLabel1.Location = new System.Drawing.Point(76, 2);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(27, 15);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Load";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            this.linkLabel1.MouseHover += new System.EventHandler(this.linkLabel1_MouseHover);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.Orange;
-            this.linkLabel2.Location = new System.Drawing.Point(122, 2);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(26, 15);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Input";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            this.linkLabel2.MouseHover += new System.EventHandler(this.linkLabel2_MouseHover);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ctrlsMainApp
             // 
@@ -741,18 +1036,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlControls);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlArray);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ctrlsMainApp";
-            this.Size = new System.Drawing.Size(610, 604);
+            this.Size = new System.Drawing.Size(700, 604);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnlArray.ResumeLayout(false);
+            this.pnlElements.ResumeLayout(false);
+            this.pnlElements.PerformLayout();
             this.pnlBubble.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.pnlElements.ResumeLayout(false);
-            this.pnlElements.PerformLayout();
             this.pnlControls.ResumeLayout(false);
             this.pnlSort1.ResumeLayout(false);
             this.pnlSort2.ResumeLayout(false);
@@ -763,7 +1058,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.Button btnExcute;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnPause;
@@ -772,19 +1067,12 @@
         private System.Windows.Forms.Button btnRandoms;
         private System.Windows.Forms.Label lbIconSmall;
         private System.Windows.Forms.Label lbBubble;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbTextSort;
         private System.Windows.Forms.ToolStripMenuItem acessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem demoToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlArray;
         private System.Windows.Forms.Panel pnlBubble;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel pnlSort1;
@@ -819,5 +1107,39 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label49;
     }
 }
