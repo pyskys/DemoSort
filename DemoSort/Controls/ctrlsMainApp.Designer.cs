@@ -35,6 +35,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnRandoms = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbIconSmall = new System.Windows.Forms.Label();
             this.lbTextSort = new System.Windows.Forms.Label();
             this.acessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,15 +43,47 @@
             this.pnlArray = new System.Windows.Forms.Panel();
             this.pnlElements = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.btnElements = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlBubble = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbBubble = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.btnPause = new System.Windows.Forms.Button();
             this.pnlSort1 = new System.Windows.Forms.Panel();
@@ -80,39 +113,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcute = new System.Windows.Forms.Button();
-            this.lbIconSmall = new System.Windows.Forms.Label();
-            this.btnElements = new System.Windows.Forms.Button();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbBubble = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pnlArray.SuspendLayout();
             this.pnlElements.SuspendLayout();
@@ -133,6 +133,7 @@
             this.txtSize.TabIndex = 2;
             this.txtSize.Text = "10";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSize.MouseHover += new System.EventHandler(this.txtSize_MouseHover);
             // 
             // panel4
             // 
@@ -179,6 +180,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(580, 31);
             this.panel2.TabIndex = 6;
+            // 
+            // lbIconSmall
+            // 
+            this.lbIconSmall.BackColor = System.Drawing.Color.Transparent;
+            this.lbIconSmall.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbIconSmall.Image = global::DemoSort.Properties.Resources.icon1small;
+            this.lbIconSmall.Location = new System.Drawing.Point(-1, 0);
+            this.lbIconSmall.Name = "lbIconSmall";
+            this.lbIconSmall.Size = new System.Drawing.Size(27, 29);
+            this.lbIconSmall.TabIndex = 2;
             // 
             // lbTextSort
             // 
@@ -260,6 +271,22 @@
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             this.linkLabel2.MouseHover += new System.EventHandler(this.linkLabel2_MouseHover);
             // 
+            // btnElements
+            // 
+            this.btnElements.BackColor = System.Drawing.Color.Transparent;
+            this.btnElements.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnElements.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnElements.ForeColor = System.Drawing.Color.Green;
+            this.btnElements.Image = global::DemoSort.Properties.Resources.btn1;
+            this.btnElements.Location = new System.Drawing.Point(3, 4);
+            this.btnElements.Name = "btnElements";
+            this.btnElements.Size = new System.Drawing.Size(23, 73);
+            this.btnElements.TabIndex = 18;
+            this.btnElements.UseVisualStyleBackColor = false;
+            this.btnElements.Click += new System.EventHandler(this.btnElements_Click);
+            this.btnElements.MouseLeave += new System.EventHandler(this.btnElements_MouseLeave);
+            this.btnElements.MouseHover += new System.EventHandler(this.btnElements_MouseHover);
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -318,6 +345,319 @@
             this.pnlBubble.Size = new System.Drawing.Size(411, 275);
             this.pnlBubble.TabIndex = 0;
             // 
+            // label53
+            // 
+            this.label53.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label53.Image = global::DemoSort.Properties.Resources.ball30;
+            this.label53.Location = new System.Drawing.Point(287, 206);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(49, 41);
+            this.label53.TabIndex = 48;
+            // 
+            // label52
+            // 
+            this.label52.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label52.Image = global::DemoSort.Properties.Resources.ball29;
+            this.label52.Location = new System.Drawing.Point(287, 157);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(49, 41);
+            this.label52.TabIndex = 47;
+            // 
+            // label51
+            // 
+            this.label51.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label51.Image = global::DemoSort.Properties.Resources.ball28;
+            this.label51.Location = new System.Drawing.Point(287, 109);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(49, 41);
+            this.label51.TabIndex = 46;
+            // 
+            // label50
+            // 
+            this.label50.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label50.Image = global::DemoSort.Properties.Resources.ball27;
+            this.label50.Location = new System.Drawing.Point(287, 60);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(49, 41);
+            this.label50.TabIndex = 45;
+            // 
+            // label49
+            // 
+            this.label49.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label49.Image = global::DemoSort.Properties.Resources.ball26;
+            this.label49.Location = new System.Drawing.Point(287, 11);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(49, 41);
+            this.label49.TabIndex = 44;
+            // 
+            // label44
+            // 
+            this.label44.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label44.Image = global::DemoSort.Properties.Resources.ball25;
+            this.label44.Location = new System.Drawing.Point(232, 206);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(49, 41);
+            this.label44.TabIndex = 43;
+            // 
+            // label45
+            // 
+            this.label45.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label45.Image = global::DemoSort.Properties.Resources.ball24;
+            this.label45.Location = new System.Drawing.Point(177, 206);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(49, 41);
+            this.label45.TabIndex = 42;
+            // 
+            // label46
+            // 
+            this.label46.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label46.Image = global::DemoSort.Properties.Resources.ball23;
+            this.label46.Location = new System.Drawing.Point(122, 206);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(49, 41);
+            this.label46.TabIndex = 41;
+            // 
+            // label47
+            // 
+            this.label47.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label47.Image = global::DemoSort.Properties.Resources.ball22;
+            this.label47.Location = new System.Drawing.Point(67, 206);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(49, 41);
+            this.label47.TabIndex = 40;
+            // 
+            // label48
+            // 
+            this.label48.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label48.Image = global::DemoSort.Properties.Resources.ball21;
+            this.label48.Location = new System.Drawing.Point(12, 206);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(49, 41);
+            this.label48.TabIndex = 39;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(21, 250);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(305, 2);
+            this.panel6.TabIndex = 38;
+            // 
+            // label39
+            // 
+            this.label39.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label39.Image = global::DemoSort.Properties.Resources.ball20;
+            this.label39.Location = new System.Drawing.Point(232, 157);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(49, 41);
+            this.label39.TabIndex = 37;
+            // 
+            // label40
+            // 
+            this.label40.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label40.Image = global::DemoSort.Properties.Resources.ball19;
+            this.label40.Location = new System.Drawing.Point(177, 157);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(49, 41);
+            this.label40.TabIndex = 36;
+            // 
+            // label41
+            // 
+            this.label41.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label41.Image = global::DemoSort.Properties.Resources.ball18;
+            this.label41.Location = new System.Drawing.Point(122, 157);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(49, 41);
+            this.label41.TabIndex = 35;
+            // 
+            // label42
+            // 
+            this.label42.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label42.Image = global::DemoSort.Properties.Resources.ball17;
+            this.label42.Location = new System.Drawing.Point(67, 157);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(49, 41);
+            this.label42.TabIndex = 34;
+            // 
+            // label43
+            // 
+            this.label43.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label43.Image = global::DemoSort.Properties.Resources.ball16;
+            this.label43.Location = new System.Drawing.Point(12, 157);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(49, 41);
+            this.label43.TabIndex = 33;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(21, 201);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(305, 2);
+            this.panel5.TabIndex = 32;
+            // 
+            // label24
+            // 
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label24.Image = global::DemoSort.Properties.Resources.ball15;
+            this.label24.Location = new System.Drawing.Point(232, 109);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(49, 41);
+            this.label24.TabIndex = 31;
+            // 
+            // label35
+            // 
+            this.label35.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label35.Image = global::DemoSort.Properties.Resources.ball14;
+            this.label35.Location = new System.Drawing.Point(177, 109);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(49, 41);
+            this.label35.TabIndex = 30;
+            // 
+            // label36
+            // 
+            this.label36.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label36.Image = global::DemoSort.Properties.Resources.ball13;
+            this.label36.Location = new System.Drawing.Point(122, 109);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(49, 41);
+            this.label36.TabIndex = 29;
+            // 
+            // label37
+            // 
+            this.label37.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label37.Image = global::DemoSort.Properties.Resources.ball12;
+            this.label37.Location = new System.Drawing.Point(67, 109);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(49, 41);
+            this.label37.TabIndex = 28;
+            // 
+            // label38
+            // 
+            this.label38.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label38.Image = global::DemoSort.Properties.Resources.ball11;
+            this.label38.Location = new System.Drawing.Point(12, 109);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(49, 41);
+            this.label38.TabIndex = 27;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(21, 152);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(305, 2);
+            this.panel3.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.Location = new System.Drawing.Point(232, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 41);
+            this.label6.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Image = global::DemoSort.Properties.Resources.ball9;
+            this.label7.Location = new System.Drawing.Point(177, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 41);
+            this.label7.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Image = global::DemoSort.Properties.Resources.ball8;
+            this.label9.Location = new System.Drawing.Point(122, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 41);
+            this.label9.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Image = global::DemoSort.Properties.Resources.ball7;
+            this.label11.Location = new System.Drawing.Point(67, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 41);
+            this.label11.TabIndex = 22;
+            // 
+            // label23
+            // 
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label23.Image = global::DemoSort.Properties.Resources.ball6;
+            this.label23.Location = new System.Drawing.Point(12, 60);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(49, 41);
+            this.label23.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(21, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(305, 2);
+            this.panel1.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Image = global::DemoSort.Properties.Resources.ball5;
+            this.label5.Location = new System.Drawing.Point(232, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 41);
+            this.label5.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Image = global::DemoSort.Properties.Resources.ball4;
+            this.label4.Location = new System.Drawing.Point(177, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 41);
+            this.label4.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Image = global::DemoSort.Properties.Resources.ball3;
+            this.label3.Location = new System.Drawing.Point(122, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 41);
+            this.label3.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Image = global::DemoSort.Properties.Resources.ball2;
+            this.label2.Location = new System.Drawing.Point(67, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 41);
+            this.label2.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Image = global::DemoSort.Properties.Resources.ball1;
+            this.label8.Location = new System.Drawing.Point(12, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 41);
+            this.label8.TabIndex = 15;
+            // 
+            // lbBubble
+            // 
+            this.lbBubble.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbBubble.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbBubble.Image = global::DemoSort.Properties.Resources.ball5;
+            this.lbBubble.Location = new System.Drawing.Point(534, 1);
+            this.lbBubble.Name = "lbBubble";
+            this.lbBubble.Size = new System.Drawing.Size(48, 40);
+            this.lbBubble.TabIndex = 1;
+            this.lbBubble.Click += new System.EventHandler(this.lbBubble_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -335,38 +675,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(21, 104);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 2);
-            this.panel1.TabIndex = 20;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(21, 152);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(305, 2);
-            this.panel3.TabIndex = 26;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(21, 201);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(305, 2);
-            this.panel5.TabIndex = 32;
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(21, 250);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(305, 2);
-            this.panel6.TabIndex = 38;
             // 
             // pnlControls
             // 
@@ -722,313 +1030,7 @@
             this.btnExcute.TabIndex = 0;
             this.btnExcute.Text = "Excute";
             this.btnExcute.UseVisualStyleBackColor = true;
-            // 
-            // lbIconSmall
-            // 
-            this.lbIconSmall.BackColor = System.Drawing.Color.Transparent;
-            this.lbIconSmall.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbIconSmall.Image = global::DemoSort.Properties.Resources.icon1small;
-            this.lbIconSmall.Location = new System.Drawing.Point(-1, 0);
-            this.lbIconSmall.Name = "lbIconSmall";
-            this.lbIconSmall.Size = new System.Drawing.Size(27, 29);
-            this.lbIconSmall.TabIndex = 2;
-            // 
-            // btnElements
-            // 
-            this.btnElements.BackColor = System.Drawing.Color.Transparent;
-            this.btnElements.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnElements.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElements.ForeColor = System.Drawing.Color.Green;
-            this.btnElements.Image = global::DemoSort.Properties.Resources.btn1;
-            this.btnElements.Location = new System.Drawing.Point(3, 4);
-            this.btnElements.Name = "btnElements";
-            this.btnElements.Size = new System.Drawing.Size(23, 73);
-            this.btnElements.TabIndex = 18;
-            this.btnElements.UseVisualStyleBackColor = false;
-            this.btnElements.Click += new System.EventHandler(this.btnElements_Click);
-            this.btnElements.MouseLeave += new System.EventHandler(this.btnElements_MouseLeave);
-            this.btnElements.MouseHover += new System.EventHandler(this.btnElements_MouseHover);
-            // 
-            // label53
-            // 
-            this.label53.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label53.Image = global::DemoSort.Properties.Resources.ball30;
-            this.label53.Location = new System.Drawing.Point(287, 206);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(49, 41);
-            this.label53.TabIndex = 48;
-            // 
-            // label52
-            // 
-            this.label52.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label52.Image = global::DemoSort.Properties.Resources.ball29;
-            this.label52.Location = new System.Drawing.Point(287, 157);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(49, 41);
-            this.label52.TabIndex = 47;
-            // 
-            // label51
-            // 
-            this.label51.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label51.Image = global::DemoSort.Properties.Resources.ball28;
-            this.label51.Location = new System.Drawing.Point(287, 109);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(49, 41);
-            this.label51.TabIndex = 46;
-            // 
-            // label50
-            // 
-            this.label50.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label50.Image = global::DemoSort.Properties.Resources.ball27;
-            this.label50.Location = new System.Drawing.Point(287, 60);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(49, 41);
-            this.label50.TabIndex = 45;
-            // 
-            // label49
-            // 
-            this.label49.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label49.Image = global::DemoSort.Properties.Resources.ball26;
-            this.label49.Location = new System.Drawing.Point(287, 11);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(49, 41);
-            this.label49.TabIndex = 44;
-            // 
-            // label44
-            // 
-            this.label44.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label44.Image = global::DemoSort.Properties.Resources.ball25;
-            this.label44.Location = new System.Drawing.Point(232, 206);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(49, 41);
-            this.label44.TabIndex = 43;
-            // 
-            // label45
-            // 
-            this.label45.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label45.Image = global::DemoSort.Properties.Resources.ball24;
-            this.label45.Location = new System.Drawing.Point(177, 206);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(49, 41);
-            this.label45.TabIndex = 42;
-            // 
-            // label46
-            // 
-            this.label46.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label46.Image = global::DemoSort.Properties.Resources.ball23;
-            this.label46.Location = new System.Drawing.Point(122, 206);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(49, 41);
-            this.label46.TabIndex = 41;
-            // 
-            // label47
-            // 
-            this.label47.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label47.Image = global::DemoSort.Properties.Resources.ball22;
-            this.label47.Location = new System.Drawing.Point(67, 206);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(49, 41);
-            this.label47.TabIndex = 40;
-            // 
-            // label48
-            // 
-            this.label48.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label48.Image = global::DemoSort.Properties.Resources.ball21;
-            this.label48.Location = new System.Drawing.Point(12, 206);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(49, 41);
-            this.label48.TabIndex = 39;
-            // 
-            // label39
-            // 
-            this.label39.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label39.Image = global::DemoSort.Properties.Resources.ball20;
-            this.label39.Location = new System.Drawing.Point(232, 157);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(49, 41);
-            this.label39.TabIndex = 37;
-            // 
-            // label40
-            // 
-            this.label40.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label40.Image = global::DemoSort.Properties.Resources.ball19;
-            this.label40.Location = new System.Drawing.Point(177, 157);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(49, 41);
-            this.label40.TabIndex = 36;
-            // 
-            // label41
-            // 
-            this.label41.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label41.Image = global::DemoSort.Properties.Resources.ball18;
-            this.label41.Location = new System.Drawing.Point(122, 157);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(49, 41);
-            this.label41.TabIndex = 35;
-            // 
-            // label42
-            // 
-            this.label42.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label42.Image = global::DemoSort.Properties.Resources.ball17;
-            this.label42.Location = new System.Drawing.Point(67, 157);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(49, 41);
-            this.label42.TabIndex = 34;
-            // 
-            // label43
-            // 
-            this.label43.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label43.Image = global::DemoSort.Properties.Resources.ball16;
-            this.label43.Location = new System.Drawing.Point(12, 157);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(49, 41);
-            this.label43.TabIndex = 33;
-            // 
-            // label24
-            // 
-            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label24.Image = global::DemoSort.Properties.Resources.ball15;
-            this.label24.Location = new System.Drawing.Point(232, 109);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(49, 41);
-            this.label24.TabIndex = 31;
-            // 
-            // label35
-            // 
-            this.label35.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label35.Image = global::DemoSort.Properties.Resources.ball14;
-            this.label35.Location = new System.Drawing.Point(177, 109);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(49, 41);
-            this.label35.TabIndex = 30;
-            // 
-            // label36
-            // 
-            this.label36.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label36.Image = global::DemoSort.Properties.Resources.ball13;
-            this.label36.Location = new System.Drawing.Point(122, 109);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(49, 41);
-            this.label36.TabIndex = 29;
-            // 
-            // label37
-            // 
-            this.label37.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label37.Image = global::DemoSort.Properties.Resources.ball12;
-            this.label37.Location = new System.Drawing.Point(67, 109);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(49, 41);
-            this.label37.TabIndex = 28;
-            // 
-            // label38
-            // 
-            this.label38.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label38.Image = global::DemoSort.Properties.Resources.ball11;
-            this.label38.Location = new System.Drawing.Point(12, 109);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(49, 41);
-            this.label38.TabIndex = 27;
-            // 
-            // label6
-            // 
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.Location = new System.Drawing.Point(232, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 41);
-            this.label6.TabIndex = 25;
-            // 
-            // label7
-            // 
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Image = global::DemoSort.Properties.Resources.ball9;
-            this.label7.Location = new System.Drawing.Point(177, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 41);
-            this.label7.TabIndex = 24;
-            // 
-            // label9
-            // 
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Image = global::DemoSort.Properties.Resources.ball8;
-            this.label9.Location = new System.Drawing.Point(122, 60);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 41);
-            this.label9.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Image = global::DemoSort.Properties.Resources.ball7;
-            this.label11.Location = new System.Drawing.Point(67, 60);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 41);
-            this.label11.TabIndex = 22;
-            // 
-            // label23
-            // 
-            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label23.Image = global::DemoSort.Properties.Resources.ball6;
-            this.label23.Location = new System.Drawing.Point(12, 60);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(49, 41);
-            this.label23.TabIndex = 21;
-            // 
-            // label5
-            // 
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Image = global::DemoSort.Properties.Resources.ball5;
-            this.label5.Location = new System.Drawing.Point(232, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 41);
-            this.label5.TabIndex = 19;
-            // 
-            // label4
-            // 
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Image = global::DemoSort.Properties.Resources.ball4;
-            this.label4.Location = new System.Drawing.Point(177, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 41);
-            this.label4.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Image = global::DemoSort.Properties.Resources.ball3;
-            this.label3.Location = new System.Drawing.Point(122, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 41);
-            this.label3.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Image = global::DemoSort.Properties.Resources.ball2;
-            this.label2.Location = new System.Drawing.Point(67, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 41);
-            this.label2.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Image = global::DemoSort.Properties.Resources.ball1;
-            this.label8.Location = new System.Drawing.Point(12, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 41);
-            this.label8.TabIndex = 15;
-            // 
-            // lbBubble
-            // 
-            this.lbBubble.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbBubble.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbBubble.Image = global::DemoSort.Properties.Resources.ball5;
-            this.lbBubble.Location = new System.Drawing.Point(534, 1);
-            this.lbBubble.Name = "lbBubble";
-            this.lbBubble.Size = new System.Drawing.Size(48, 40);
-            this.lbBubble.TabIndex = 1;
-            this.lbBubble.Click += new System.EventHandler(this.lbBubble_Click);
+            this.btnExcute.Click += new System.EventHandler(this.btnExcute_Click);
             // 
             // ctrlsMainApp
             // 

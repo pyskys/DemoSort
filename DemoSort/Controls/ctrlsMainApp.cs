@@ -17,7 +17,11 @@ namespace DemoSort.Controls
         bool bShowPanelBubble = true;
         bool bShowPanelElements = true;
         bool bShowSort1 = false;
-
+        private List<Elements> lstAllElementApp = new List<Elements>();
+        Random ran = new Random();
+        Thread _thread;
+        //Next index Timer
+        int iNext = 1;
         //Lưu control muốn tạo hiệu ứng
         Control ctrlsEff;
 
@@ -88,6 +92,12 @@ namespace DemoSort.Controls
                   }
               }
             //////////////////////////////////////////////////////////////
+              this.Load += ctrlsMainApp_Load;
+        }
+
+        void ctrlsMainApp_Load(object sender, EventArgs e)
+        {
+            ShowElementsPanel();
         }
         void ctrlsMainApp_SizeChanged(object sender, EventArgs e)
         {
@@ -95,6 +105,8 @@ namespace DemoSort.Controls
             if (bShowSort1)
                 //Cập nhặt vị trí hiện tại cho Sort 2
                 pnlSort2.Location = new Point(pnlSort2.Location.X, btnSort1.Location.Y + 22);
+            Point pLoca = GetPositionArray();
+            ResetLocationInPanel(lstElementsArray, pLoca.X, pLoca.Y);
         }
 
         private void sort_item_MouseLeave(object sender, EventArgs e)
@@ -216,11 +228,9 @@ namespace DemoSort.Controls
             Button btn = (Button)sender;
             btn.Image = Properties.Resources.btn1;
         }
-
-        private void btnElements_Click(object sender, EventArgs e)
+        private void ShowElementsPanel()
         {
-            Button btn = (Button)sender;
-            Commons.ImageClickEffect(btn, Properties.Resources.btn1, Properties.Resources.btn3);
+            Commons.ImageClickEffect(btnElements, Properties.Resources.btn1, Properties.Resources.btn3);
 
             if (bShowPanelElements)
                 //Duy chuyển ra
@@ -230,6 +240,10 @@ namespace DemoSort.Controls
                 Commons.MovePanel(pnlElements, this.Width - 148, pnlElements.Location.Y, 5);
 
             bShowPanelElements = !bShowPanelElements;
+        }
+        private void btnElements_Click(object sender, EventArgs e)
+        {
+            ShowElementsPanel();
         }
 
         private void btnSort2_Click(object sender, EventArgs e)
@@ -262,7 +276,6 @@ namespace DemoSort.Controls
         {
             toolTip1.SetToolTip((Control)sender, "Generate array data by press key data!");
         }
-        int iNext = 1;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (ctrlsEff == null) return;
@@ -294,7 +307,7 @@ namespace DemoSort.Controls
                     break;
             }
         }
-        private List<Elements> lstAllElementApp = new List<Elements>();
+
         private void RemoveAllElement()
         {
             foreach (Elements item in lstAllElementApp)
@@ -315,28 +328,115 @@ namespace DemoSort.Controls
             lstAllElementApp.Add(el);
             return el;
         }
-        Random ran = new Random();
         private int RandomNumber(int iStart, int iEnd)
         {
             
             return ran.Next(iStart, iEnd);
         }
+        private void ResetLocationInPanel(List<Elements> lstEles, int xStart, int yStart)
+        {
+            foreach (Elements item in lstEles)
+            {
+                item.Location = new Point(xStart, yStart);
+                xStart += 40;
+            }
+        }
+        private Point GetPositionArray()
+        {
+            Point pLoca = new Point(0,0);
+
+            int iNumber = int.Parse(txtSize.Text.Trim());
+            int iXArray = Math.Abs((pnlElements.Location.X + btnRandoms.Width - iNumber * 42) / 2);
+            int iYArray = Math.Abs((pnlElements.Location.Y + btnElements.Height - 40) / 2);
+            pLoca.X = iXArray;
+            pLoca.Y = iYArray;
+            return pLoca;
+        }
         private void btnRandoms_Click(object sender, EventArgs e)
         {
             //Xóa các phần tử củ trước
             RemoveAllElement();
-
             int iNumber = int.Parse(txtSize.Text.Trim());
-            int iXArray = pnlArray.Width/2 -150;
-            int iYArray = pnlArray.Height / 2 - 100;
+
+            Point pLoca = GetPositionArray();
+   
             for (int i = 0; i < iNumber; i++)
             {
                 int iRandom = RandomNumber(0,i*3);
-                Elements el = GetElement(iRandom.ToString(), iXArray, iYArray, (Bitmap)lbBubble.Image);
-                iXArray += 40;
+                Elements el = GetElement(iRandom.ToString(), pLoca.X, pLoca.Y, (Bitmap)lbBubble.Image);
+                pLoca.X += 40;
 
                 lstElementsArray.Add(el);
                 pnlArray.Controls.Add(el);
+            }
+        }
+
+        private void txtSize_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip((Control)sender,"Maximum = 30 is beautiful array!");
+        }
+
+        private void btnExcute_Click(object sender, EventArgs e)
+        {
+            //Nếu chưa có dữ liệu thì tạo mới
+
+            //Nếu có rồi thì Sort
+
+            //Tắt Thread trước đó.
+            AbortThreadDemo();
+
+            //Tạo Thread mới
+            _thread = new Thread(SelectionSortDemo);
+            _thread.Start();
+        }
+        public static void SwapElement(Elements e1, Elements e2)
+        {
+            Point p1 = e1.Location;
+            Point p2 = e2.Location;
+
+            e1.MoveTo(e1.Location.X, p1.Y - 50, 5);
+            e2.MoveTo(e2.Location.X, p2.Y + 50, 5, true);
+
+            e2.MoveTo(p1.X, p1.Y, 10);
+            e1.MoveTo(p2.X ,p2.Y, 10,true);
+        }
+        public static void SetDateElements(Elements eSet, Elements eGet)
+        {
+            eSet.aText = eGet.aText;
+            eSet.aBitmap = eGet.aBitmap;
+            eSet.Location = eGet.Location;
+        }
+        public void SelectionSortDemo()
+        {
+            int i = 0, j = 0,iMin=0;
+            for (i = 0; i < lstElementsArray.Count - 1; i++)
+            {
+                iMin = i;
+                for (j = i + 1; j < lstElementsArray.Count; j++)
+                {
+                    if (int.Parse(lstElementsArray[j].aText) < int.Parse(lstElementsArray[iMin].aText))
+                        iMin = j;
+                }
+                if (iMin != i)
+                {
+                    SwapElement(lstElementsArray[iMin], lstElementsArray[i]);
+
+                    Elements eTem = lstElementsArray[iMin];
+                    lstElementsArray[iMin] = lstElementsArray[i];
+                    lstElementsArray[i] = eTem;
+                }
+            }
+            Point loca = GetPositionArray();
+            ResetLocationInPanel(lstElementsArray, loca.X, loca.Y);
+        }
+        private void AbortThreadDemo()
+        {
+            try
+            {
+                _thread.Abort();
+            }
+            catch (Exception ex)
+            { 
             }
         }
     }
