@@ -24,7 +24,7 @@ namespace DemoSort
 
         private void frmMainDemo_Load(object sender, EventArgs e)
         {
-          
+           
         }
 
         private void frmMainDemo_Paint(object sender, PaintEventArgs e)
@@ -34,6 +34,12 @@ namespace DemoSort
             //Graphics g = panel2.CreateGraphics();
             //g.FillRectangle(brush, rec);
             //label1.BackColor = Color.Transparent;
+        }
+
+        private void frmMainDemo_SizeChanged(object sender, EventArgs e)
+        {
+            //ctrlsMainApp1.Width = this.Width;
+            //ctrlsMainApp1.Height = this.Height;
         }
 
     }

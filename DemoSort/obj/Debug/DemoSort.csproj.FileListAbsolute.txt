@@ -16,3 +16,4 @@ C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.Controls.ctrlsMainApp
 C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.frmMainDemo.resources
 C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.Properties.Resources.resources
 C:\Users\Skys\Desktop\DemoSort\DemoSort\obj\Debug\DemoSort.csproj.GenerateResource.Cache
+C:\Users\Skys\Desktop\DemoSort\DemoSort\bin\Debug\DemoSort.exe.config
