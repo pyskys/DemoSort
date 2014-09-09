@@ -16,6 +16,7 @@ namespace DemoSort.Controls
 
         bool bShowPanelBubble = true;
         bool bShowPanelElements = true;
+        bool bShowPanelColor = true;
         bool bShowSort1 = false;
         private List<Elements> lstAllElementApp = new List<Elements>();
         Random ran = new Random();
@@ -27,6 +28,9 @@ namespace DemoSort.Controls
 
         //Lưu vị trí hiện hành của control tạo hiệu ứng
         Point pEff;
+        bool bDataExists = false;
+        bool bAscending = true;
+        int iSpeed = 10;
 
         List<Elements> lstElementsArray = new List<Elements>();
         public ctrlsMainApp()
@@ -37,6 +41,7 @@ namespace DemoSort.Controls
              // Điều chỉnh các panel về vị trí thích hợp
              pnlBubble.Location = new Point(this.Width -120, pnlBubble.Location.Y);
              pnlElements.Location = new Point(this.Width - 148, this.Height - 135);
+             pnlColor.Location = new Point(this.Width - 148, this.Height - 135*2+50);
              pnlSort2.Location = new Point(pnlSort1.Location.X, this.Height - 108);
 
              //Tạo sự kiện Click chuột cho các lable chứa Iamge quả bóng
@@ -94,10 +99,14 @@ namespace DemoSort.Controls
             //////////////////////////////////////////////////////////////
               this.Load += ctrlsMainApp_Load;
         }
-
+        public void ClosingForm()
+        {
+            AbortThreadDemo();
+        }
         void ctrlsMainApp_Load(object sender, EventArgs e)
         {
-            ShowElementsPanel();
+            ShowElementsPanel(btnElements,pnlElements,bShowPanelElements);
+            bShowPanelElements = !bShowPanelElements;
         }
         void ctrlsMainApp_SizeChanged(object sender, EventArgs e)
         {
@@ -108,7 +117,18 @@ namespace DemoSort.Controls
             Point pLoca = GetPositionArray();
             ResetLocationInPanel(lstElementsArray, pLoca.X, pLoca.Y);
         }
-
+        private int GetTimeSleep()
+        {
+            try
+            {
+                int iNumber = int.Parse(txtSpeed.Text.Trim());
+                return iNumber;
+            }
+            catch (Exception)
+            {
+                return iSpeed;
+            }
+        }
         private void sort_item_MouseLeave(object sender, EventArgs e)
         {
             Label lb = (Label)sender;
@@ -161,6 +181,11 @@ namespace DemoSort.Controls
         {
             Label lb = (Label)sender;
             lbBubble.Image = lb.Image;
+            
+            foreach (Elements item in lstElementsArray)
+            {
+                item.aBitmap = (Bitmap)lb.Image;
+            }
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -228,22 +253,20 @@ namespace DemoSort.Controls
             Button btn = (Button)sender;
             btn.Image = Properties.Resources.btn1;
         }
-        private void ShowElementsPanel()
+        private void ShowElementsPanel(Button btn, Panel pnl, bool bShow)
         {
-            Commons.ImageClickEffect(btnElements, Properties.Resources.btn1, Properties.Resources.btn3);
-
-            if (bShowPanelElements)
+            Commons.ImageClickEffect(btn, Properties.Resources.btn1, Properties.Resources.btn3);
+            if (bShow)
                 //Duy chuyển ra
-                Commons.MovePanel(pnlElements, this.Width - 271, pnlElements.Location.Y, 5);
+                Commons.MovePanel(pnl, this.Width - 271, pnl.Location.Y, 5);
             else
                 //Di chuyển vô
-                Commons.MovePanel(pnlElements, this.Width - 148, pnlElements.Location.Y, 5);
-
-            bShowPanelElements = !bShowPanelElements;
+                Commons.MovePanel(pnl, this.Width - 148, pnl.Location.Y, 5);
         }
         private void btnElements_Click(object sender, EventArgs e)
         {
-            ShowElementsPanel();
+            ShowElementsPanel((Button)sender,pnlElements,bShowPanelElements);
+            bShowPanelElements = !bShowPanelElements;
         }
 
         private void btnSort2_Click(object sender, EventArgs e)
@@ -322,7 +345,7 @@ namespace DemoSort.Controls
             Elements el = new Elements(strText,
                    x, y,
                    bit
-                   );
+                   ,lbColor.BackColor);
 
             //Luu lai de Remove
             lstAllElementApp.Add(el);
@@ -352,23 +375,32 @@ namespace DemoSort.Controls
             pLoca.Y = iYArray;
             return pLoca;
         }
-        private void btnRandoms_Click(object sender, EventArgs e)
+        private void RandomData()
         {
+            bDataExists = true;
+
+            //Tắt Thread đang chạy
+            AbortThreadDemo();
+
             //Xóa các phần tử củ trước
             RemoveAllElement();
             int iNumber = int.Parse(txtSize.Text.Trim());
 
             Point pLoca = GetPositionArray();
-   
+
             for (int i = 0; i < iNumber; i++)
             {
-                int iRandom = RandomNumber(0,i*3);
+                int iRandom = RandomNumber(0, i * 3);
                 Elements el = GetElement(iRandom.ToString(), pLoca.X, pLoca.Y, (Bitmap)lbBubble.Image);
                 pLoca.X += 40;
 
                 lstElementsArray.Add(el);
                 pnlArray.Controls.Add(el);
             }
+        }
+        private void btnRandoms_Click(object sender, EventArgs e)
+        {
+            RandomData();
         }
 
         private void txtSize_MouseHover(object sender, EventArgs e)
@@ -378,8 +410,17 @@ namespace DemoSort.Controls
 
         private void btnExcute_Click(object sender, EventArgs e)
         {
-            //Nếu chưa có dữ liệu thì tạo mới
+            //Nếu chưa có dữ liệu thì thông báo chưa có và thoát
+            if (!bDataExists)
+            {
+                MessageBox.Show("Data is not valid!", "Sort", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
 
+
+            bAscending = mnSortAscending.Checked;
+
+            btnPause.Text = "Pause";
             //Nếu có rồi thì Sort
 
             //Tắt Thread trước đó.
@@ -389,22 +430,49 @@ namespace DemoSort.Controls
             _thread = new Thread(SelectionSortDemo);
             _thread.Start();
         }
-        public static void SwapElement(Elements e1, Elements e2)
+        public  void SwapElement(Elements e1, Elements e2)
         {
+            iSpeed = GetTimeSleep();
+
             Point p1 = e1.Location;
             Point p2 = e2.Location;
 
-            e1.MoveTo(e1.Location.X, p1.Y - 50, 5);
-            e2.MoveTo(e2.Location.X, p2.Y + 50, 5, true);
+            e1.MoveTo(e1.Location.X, p1.Y - 50, iSpeed/2);
+            e2.MoveTo(e2.Location.X, p2.Y + 50, iSpeed/2, true);
 
-            e2.MoveTo(p1.X, p1.Y, 10);
-            e1.MoveTo(p2.X ,p2.Y, 10,true);
+            e2.MoveTo(p1.X, p1.Y, iSpeed);
+            e1.MoveTo(p2.X, p2.Y, iSpeed, true);
         }
         public static void SetDateElements(Elements eSet, Elements eGet)
         {
             eSet.aText = eGet.aText;
             eSet.aBitmap = eGet.aBitmap;
             eSet.Location = eGet.Location;
+        }
+        private void EndDemoThread()
+        {
+            //bDataExists = false;
+            Point pLoca = GetPositionArray();
+            ResetLocationInPanel(lstElementsArray, pLoca.X, pLoca.Y);
+        }
+        private bool GetConditionSort(int x1, int x2)
+        {
+            if (bAscending)
+            {
+                //Sort tăng
+                if (x1 > x2)
+                    return true;
+                else
+                    return false;
+            }
+            else
+            {
+                //Sort giảm
+                if (x1 < x2)
+                    return true;
+                else
+                    return false;
+            }
         }
         public void SelectionSortDemo()
         {
@@ -414,11 +482,12 @@ namespace DemoSort.Controls
                 iMin = i;
                 for (j = i + 1; j < lstElementsArray.Count; j++)
                 {
-                    if (int.Parse(lstElementsArray[j].aText) < int.Parse(lstElementsArray[iMin].aText))
+                    if (GetConditionSort(int.Parse(lstElementsArray[iMin].aText),int.Parse(lstElementsArray[j].aText)))
                         iMin = j;
                 }
                 if (iMin != i)
                 {
+                    lbTextSort.Text = "Selection Sort: Swap Array[" + i.ToString() + "]" + " and Array[" + iMin.ToString() + "]"; 
                     SwapElement(lstElementsArray[iMin], lstElementsArray[i]);
 
                     Elements eTem = lstElementsArray[iMin];
@@ -426,8 +495,10 @@ namespace DemoSort.Controls
                     lstElementsArray[i] = eTem;
                 }
             }
-            Point loca = GetPositionArray();
-            ResetLocationInPanel(lstElementsArray, loca.X, loca.Y);
+
+            lbTextSort.Text = "Selection Sort: Array were sorted";
+            //Kết thúc Demo
+            EndDemoThread();
         }
         private void AbortThreadDemo()
         {
@@ -435,8 +506,78 @@ namespace DemoSort.Controls
             {
                 _thread.Abort();
             }
-            catch (Exception ex)
+            catch (Exception)
             { 
+            }
+        }
+        private void PauseThread()
+        {
+            try
+            {
+                _thread.Suspend();
+            }
+            catch (Exception)
+            { 
+            
+            }
+        }
+        private void ResumeThread()
+        {
+            try
+            {
+                _thread.Resume();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            if (btnPause.Text == "Pause")
+            {
+                btnPause.Text = "Resume";
+                PauseThread();
+            }
+            else
+            {
+                btnPause.Text = "Pause";
+                ResumeThread();
+            }
+        }
+
+        private void mnSortAscending_Click(object sender, EventArgs e)
+        {
+            mnSortAscending.Checked = !mnSortAscending.Checked;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.Image = Properties.Resources.btn2;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.Image = Properties.Resources.btn1;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowElementsPanel((Button)sender, pnlColor, bShowPanelColor);
+            bShowPanelColor = !bShowPanelColor;
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                lbColor.BackColor = colorDialog1.Color;
+                foreach (Elements item in lstElementsArray)
+                {
+                    item.aColor = colorDialog1.Color;
+                }
             }
         }
     }

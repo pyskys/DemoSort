@@ -15,18 +15,24 @@ namespace DemoSort.Controls
         //mỗi phần từ gồm text, vị trí, và hình ảnh đại diện
         private String _strText;
         private Bitmap _aBitmap;
+        private Color _aColor;
 
+        public Color aColor
+        {
+            get { return _aColor; }
+            set { _aColor = value; lbText.ForeColor = _aColor; }
+        }
         public Bitmap aBitmap
         {
             get { return _aBitmap; }
-            set { _aBitmap = value; }
+            set { _aBitmap = value; pnlImage.BackgroundImage = _aBitmap; }
         }
         public String aText
         {
             get { return _strText; }
             set { _strText = value; }
         }
-        public Elements(String strText, int x, int y, Bitmap bit)
+        public Elements(String strText, int x, int y, Bitmap bit,Color txtColor)
         {
             InitializeComponent();
             lbText.Text = strText;
@@ -35,7 +41,7 @@ namespace DemoSort.Controls
             this.Location = new Point(x, y);
             this.pnlImage.BackgroundImage = bit;
             aBitmap = bit;
-
+            aColor = txtColor;
         }
         int iXAdd = 1, iYAdd = 1;
         int iNext = 1;
@@ -115,6 +121,7 @@ namespace DemoSort.Controls
                             if (dy < 0) dy = 0;
                         }
                 }
+                this.Location = new Point(x, y);
             }).Start();
         }
         private void MoveActionInvoke(int x, int y, int ispeed)
@@ -190,6 +197,8 @@ namespace DemoSort.Controls
                         if (dy < 0) dy = 0;
                     }
             }
+
+            this.Location = new Point(x, y);
         }
         //Duy chuyển các phần tử chậm chẩm rồi biến mất
         public void MoveToExit(int x, int y, int ispeed)

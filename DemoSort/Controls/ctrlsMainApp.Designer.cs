@@ -37,7 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbIconSmall = new System.Windows.Forms.Label();
             this.lbTextSort = new System.Windows.Forms.Label();
-            this.acessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnSortAscending = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlArray = new System.Windows.Forms.Panel();
@@ -113,6 +113,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcute = new System.Windows.Forms.Button();
+            this.pnlColor = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtSpeed = new System.Windows.Forms.TextBox();
+            this.lbColor = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel2.SuspendLayout();
             this.pnlArray.SuspendLayout();
             this.pnlElements.SuspendLayout();
@@ -121,6 +127,7 @@
             this.pnlControls.SuspendLayout();
             this.pnlSort1.SuspendLayout();
             this.pnlSort2.SuspendLayout();
+            this.pnlColor.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSize
@@ -203,13 +210,14 @@
             this.lbTextSort.TabIndex = 0;
             this.lbTextSort.Text = "Selection Sort";
             // 
-            // acessToolStripMenuItem
+            // mnSortAscending
             // 
-            this.acessToolStripMenuItem.Checked = true;
-            this.acessToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.acessToolStripMenuItem.Name = "acessToolStripMenuItem";
-            this.acessToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.acessToolStripMenuItem.Text = "Sort ascending";
+            this.mnSortAscending.Checked = true;
+            this.mnSortAscending.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mnSortAscending.Name = "mnSortAscending";
+            this.mnSortAscending.Size = new System.Drawing.Size(166, 22);
+            this.mnSortAscending.Text = "Sort ascending";
+            this.mnSortAscending.Click += new System.EventHandler(this.mnSortAscending_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -221,7 +229,7 @@
             // 
             this.demoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
-            this.acessToolStripMenuItem});
+            this.mnSortAscending});
             this.demoToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.demoToolStripMenuItem.Name = "demoToolStripMenuItem";
             this.demoToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -234,6 +242,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlArray.BackColor = System.Drawing.Color.Black;
             this.pnlArray.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlArray.Controls.Add(this.pnlColor);
             this.pnlArray.Controls.Add(this.pnlElements);
             this.pnlArray.Controls.Add(this.pnlBubble);
             this.pnlArray.Controls.Add(this.lbBubble);
@@ -252,9 +261,9 @@
             this.pnlElements.Controls.Add(this.label10);
             this.pnlElements.Controls.Add(this.btnRandoms);
             this.pnlElements.Controls.Add(this.txtSize);
-            this.pnlElements.Location = new System.Drawing.Point(359, 390);
+            this.pnlElements.Location = new System.Drawing.Point(207, 425);
             this.pnlElements.Name = "pnlElements";
-            this.pnlElements.Size = new System.Drawing.Size(171, 87);
+            this.pnlElements.Size = new System.Drawing.Size(214, 87);
             this.pnlElements.TabIndex = 2;
             // 
             // linkLabel2
@@ -703,6 +712,7 @@
             this.btnPause.TabIndex = 4;
             this.btnPause.Text = "Pause";
             this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // pnlSort1
             // 
@@ -1032,6 +1042,70 @@
             this.btnExcute.UseVisualStyleBackColor = true;
             this.btnExcute.Click += new System.EventHandler(this.btnExcute_Click);
             // 
+            // pnlColor
+            // 
+            this.pnlColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlColor.Controls.Add(this.lbColor);
+            this.pnlColor.Controls.Add(this.button1);
+            this.pnlColor.Controls.Add(this.label54);
+            this.pnlColor.Controls.Add(this.txtSpeed);
+            this.pnlColor.Location = new System.Drawing.Point(79, 332);
+            this.pnlColor.Name = "pnlColor";
+            this.pnlColor.Size = new System.Drawing.Size(214, 87);
+            this.pnlColor.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Green;
+            this.button1.Image = global::DemoSort.Properties.Resources.btn1;
+            this.button1.Location = new System.Drawing.Point(3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 73);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label54.Location = new System.Drawing.Point(28, 4);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(45, 13);
+            this.label54.TabIndex = 3;
+            this.label54.Text = "Speed:";
+            // 
+            // txtSpeed
+            // 
+            this.txtSpeed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSpeed.ForeColor = System.Drawing.Color.Indigo;
+            this.txtSpeed.Location = new System.Drawing.Point(29, 21);
+            this.txtSpeed.Name = "txtSpeed";
+            this.txtSpeed.Size = new System.Drawing.Size(117, 21);
+            this.txtSpeed.TabIndex = 2;
+            this.txtSpeed.Text = "10";
+            this.txtSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbColor
+            // 
+            this.lbColor.BackColor = System.Drawing.Color.White;
+            this.lbColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbColor.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbColor.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbColor.Location = new System.Drawing.Point(29, 47);
+            this.lbColor.Name = "lbColor";
+            this.lbColor.Size = new System.Drawing.Size(117, 28);
+            this.lbColor.TabIndex = 19;
+            this.lbColor.Click += new System.EventHandler(this.label55_Click);
+            // 
             // ctrlsMainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1053,6 +1127,8 @@
             this.pnlControls.ResumeLayout(false);
             this.pnlSort1.ResumeLayout(false);
             this.pnlSort2.ResumeLayout(false);
+            this.pnlColor.ResumeLayout(false);
+            this.pnlColor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1071,7 +1147,7 @@
         private System.Windows.Forms.Label lbBubble;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbTextSort;
-        private System.Windows.Forms.ToolStripMenuItem acessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnSortAscending;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem demoToolStripMenuItem;
         private System.Windows.Forms.Panel pnlArray;
@@ -1143,5 +1219,11 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Panel pnlColor;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txtSpeed;
+        private System.Windows.Forms.Label lbColor;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

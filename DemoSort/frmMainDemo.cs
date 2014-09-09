@@ -42,5 +42,15 @@ namespace DemoSort
             //ctrlsMainApp1.Height = this.Height;
         }
 
+        private void ctrlsMainApp1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMainDemo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ctrlsMainApp1.ClosingForm();
+        }
+
     }
 }

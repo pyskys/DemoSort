@@ -38,6 +38,7 @@
             this.ctrlsMainApp1.Name = "ctrlsMainApp1";
             this.ctrlsMainApp1.Size = new System.Drawing.Size(750, 604);
             this.ctrlsMainApp1.TabIndex = 0;
+            this.ctrlsMainApp1.Load += new System.EventHandler(this.ctrlsMainApp1_Load);
             // 
             // frmMainDemo
             // 
@@ -48,6 +49,7 @@
             this.Name = "frmMainDemo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sort Demo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainDemo_FormClosing);
             this.Load += new System.EventHandler(this.frmMainDemo_Load);
             this.SizeChanged += new System.EventHandler(this.frmMainDemo_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmMainDemo_Paint);
