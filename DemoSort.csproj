@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A99046C6-46AA-4F36-A0DF-9BB9FB1DDF99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DemoSort</RootNamespace>
+    <AssemblyName>DemoSort</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonsData\Commons.cs" />
+    <Compile Include="Controls\ctrlsMainApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlsMainApp.Designer.cs">
+      <DependentUpon>ctrlsMainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Elements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Elements.Designer.cs">
+      <DependentUpon>Elements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainDemo.Designer.cs">
+      <DependentUpon>frmMainDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ctrlsMainApp.resx">
+      <DependentUpon>ctrlsMainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Elements.resx">
+      <DependentUpon>Elements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainDemo.resx">
+      <DependentUpon>frmMainDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon4small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon5small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon6small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon7small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon8small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ballok\ball30.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
