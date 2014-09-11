@@ -250,7 +250,7 @@ namespace DemoSort.Controls
 
         private void lbText_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Value: " + lbText.Text, "PRN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Value: " + lbText.Text, "Elements", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

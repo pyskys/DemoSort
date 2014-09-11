@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>A.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +61,12 @@
     <Compile Include="Controls\Elements.Designer.cs">
       <DependentUpon>Elements.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoadMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadMessage.designer.cs">
+      <DependentUpon>frmLoadMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Elements.resx">
       <DependentUpon>Elements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadMessage.resx">
+      <DependentUpon>frmLoadMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainDemo.resx">
       <DependentUpon>frmMainDemo.cs</DependentUpon>
@@ -266,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ballok\ball30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="A.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,19 +13,18 @@ namespace DemoSort.CommonsData
     /// </summary>
     public class Commons
     {
-
         /// <summary>
-        /// Hàm di chuyển panel xuất hiện ra vị trí định sẵn
+        /// Hàm di chuyển Control xuất hiện ra vị trí định sẵn
         /// </summary>
-        /// <param name="pnl">Panle cần di chuyển</param>
+        /// <param name="ctr">Control cần di chuyển</param>
         /// <param name="XFinish">Tọa độ X cần di chuyển đến</param>
         /// <param name="YFinish">Tọa độ Y cần di chuyển đến</param>
         /// <param name="iSleep">Thời gian tạm dừng để tạo hiệu ứng</param>
-        public static void MovePanel(Panel pnl, int XFinish = 0, int YFinish = 0, int iSleep = 0, int iDefaultDistance = 50/*Giá trị khoản cách mặc định làm tốc độ giảm xuống*/)
+        public static void MoveControls(Control ctr, int XFinish = 0, int YFinish = 0, int iSleep = 0, int iDefaultDistance = 50/*Giá trị khoản cách mặc định làm tốc độ giảm xuống*/)
         {
             //Khoản cách từ vị trí hiện tại đến điểm kết thúc
-            int dx = pnl.Location.X - XFinish;
-            int dy = pnl.Location.Y - YFinish;
+            int dx = ctr.Location.X - XFinish;
+            int dy = ctr.Location.Y - YFinish;
 
             //iXAdd và iYAdd là các giá trị dương dược cộng thêm để dịch chuyển
             int iXAdd = Math.Abs(dx / 50);
@@ -40,12 +39,12 @@ namespace DemoSort.CommonsData
             int iNext = 1;
 
             //Gọi hàm detail
-            MovePanelDetail(pnl, XFinish, YFinish, iSleep, iDefaultDistance, iNext, iXAdd, iYAdd);
+            MoveControlDetail(ctr, XFinish, YFinish, iSleep, iDefaultDistance, iNext, iXAdd, iYAdd);
         }
         /// <summary>
-        /// Hàm di chuyển panel xuất hiện ra vị trí định sẵn
+        /// Hàm di chuyển Control xuất hiện ra vị trí định sẵn
         /// </summary>
-        /// <param name="pnl">Panle cần di chuyển</param>
+        /// <param name="ctr">Control cần di chuyển</param>
         /// <param name="XFinish">Tọa độ X cần di chuyển đến</param>
         /// <param name="YFinish">Tọa độ Y cần di chuyển đến</param>
         /// <param name="iSleep">Thời gian tạm dừng để tạo hiệu ứng</param>
@@ -53,14 +52,14 @@ namespace DemoSort.CommonsData
         /// <param name="iNext">Độ lệch khoảng cách khi giảm tốc độ</param>
         /// <param name="iXAdd">Độ lệch khoảng cách X khi tăng tốc độ</param>
         /// <param name="iYAdd">Độ lệch khoảng cách Y khi tăng tốc độ</param>
-        public static void MovePanelDetail(Panel pnl, int XFinish = 0, int YFinish = 0, int iSleep = 0, int iDefaultDistance = 50/*Giá trị khoản cách mặc định làm tốc độ giảm xuống*/, int iNext = 1, int iXAdd = 5, int iYAdd = 5)
+        public static void MoveControlDetail(Control ctr, int XFinish = 0, int YFinish = 0, int iSleep = 0, int iDefaultDistance = 50/*Giá trị khoản cách mặc định làm tốc độ giảm xuống*/, int iNext = 1, int iXAdd = 5, int iYAdd = 5)
         {
-            if (pnl == null) return;
+            if (ctr == null) return;
             new Thread(() =>
             {
                 //Khoản cách từ vị trí hiện tại đến điểm kết thúc
-                int dx = pnl.Location.X - XFinish;
-                int dy = pnl.Location.Y - YFinish;
+                int dx = ctr.Location.X - XFinish;
+                int dy = ctr.Location.Y - YFinish;
 
                 //Duy chuyển từ phải sang trái
                 while (dx > 0)
@@ -68,13 +67,13 @@ namespace DemoSort.CommonsData
                     Thread.Sleep(iSleep);
 
                     //Tính lại khoản cách. nếu dưới mặc định thì giảm tốc độ
-                    if (Math.Abs(pnl.Location.X - XFinish) <= iDefaultDistance)
+                    if (Math.Abs(ctr.Location.X - XFinish) <= iDefaultDistance)
                         iNext = 1;
                     else
                         iNext = iXAdd;
 
                     dx -= iNext;
-                    pnl.Location = new Point(pnl.Location.X - iNext, pnl.Location.Y);
+                    ctr.Location = new Point(ctr.Location.X - iNext, ctr.Location.Y);
 
                     //Tăng về 0 nếu trừ vượt xuống 0
                     if (dx < 0) dx = 0;
@@ -86,13 +85,13 @@ namespace DemoSort.CommonsData
                     Thread.Sleep(iSleep);
 
                     //Tính lại khoản cách. nếu dưới mặc định thì giảm tốc độ
-                    if (Math.Abs(pnl.Location.X - XFinish) <= iDefaultDistance)
+                    if (Math.Abs(ctr.Location.X - XFinish) <= iDefaultDistance)
                         iNext = 1;
                     else
                         iNext = iXAdd;
 
                     dx += iNext;
-                    pnl.Location = new Point(pnl.Location.X + iNext, pnl.Location.Y);
+                    ctr.Location = new Point(ctr.Location.X + iNext, ctr.Location.Y);
 
                     //Giảm về 0 nếu trừ vượt xuống 0
                     if (dx > 0) dx = 0;
@@ -104,13 +103,13 @@ namespace DemoSort.CommonsData
                     Thread.Sleep(iSleep);
 
                     //Tính lại khoản cách. nếu dưới mặc định thì giảm tốc độ
-                    if (Math.Abs(pnl.Location.Y - YFinish) <= iDefaultDistance)
+                    if (Math.Abs(ctr.Location.Y - YFinish) <= iDefaultDistance)
                         iNext = 1;
                     else
                         iNext = iYAdd;
 
                     dy -= iNext;
-                    pnl.Location = new Point(pnl.Location.X, pnl.Location.Y - iNext);
+                    ctr.Location = new Point(ctr.Location.X, ctr.Location.Y - iNext);
 
                     //Tăng về 0 nếu trừ vượt xuống 0
                     if (dy < 0) dy = 0;
@@ -122,18 +121,18 @@ namespace DemoSort.CommonsData
                     Thread.Sleep(iSleep);
 
                     //Tính lại khoản cách. nếu dưới mặc định thì giảm tốc độ
-                    if (Math.Abs(pnl.Location.Y - XFinish) <= iDefaultDistance)
+                    if (Math.Abs(ctr.Location.Y - XFinish) <= iDefaultDistance)
                         iNext = 1;
                     else
                         iNext = iYAdd;
 
                     dy += iNext;
-                    pnl.Location = new Point(pnl.Location.X, pnl.Location.Y + iNext);
+                    ctr.Location = new Point(ctr.Location.X, ctr.Location.Y + iNext);
 
                     //Giảm về 0 nếu trừ vượt xuống 0
                     if (dy > 0) dy = 0;
                 }
-                pnl.Location = new Point(XFinish, YFinish);
+                ctr.Location = new Point(XFinish, YFinish);
             }).Start();
         }
         /// <summary>
@@ -167,6 +166,38 @@ namespace DemoSort.CommonsData
                 Thread.Sleep(iSleep);
                 btn.Image = bit1;
             }).Start();
+        }
+        public static bool CheckValidArray(String[] arr)
+        {
+            if (arr == null || arr.Length == 0) return false;
+            foreach (String item in arr)
+            {
+                try
+                {
+                    int.Parse(item);
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    public delegate void ExitLoadMessage(Object sender, LoadMessageDataArgs e);
+    public class LoadMessageDataArgs : EventArgs
+    {
+        private String _strData;
+
+        public String aData
+        {
+            get { return _strData; }
+            set { _strData = value; }
+        }
+        public LoadMessageDataArgs(String str)
+        {
+            aData = str;
         }
     }
 }

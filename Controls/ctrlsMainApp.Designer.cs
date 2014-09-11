@@ -34,16 +34,21 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnRandoms = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chboxSortAscending = new System.Windows.Forms.CheckBox();
             this.lbIconSmall = new System.Windows.Forms.Label();
             this.lbTextSort = new System.Windows.Forms.Label();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlArray = new System.Windows.Forms.Panel();
             this.pnlColor = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.cbbSpeed = new System.Windows.Forms.ComboBox();
             this.lbColor = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.pnlElements = new System.Windows.Forms.Panel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.cbbSize = new System.Windows.Forms.ComboBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnElements = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -84,8 +89,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lbBubble = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.threadQuestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.btnPause = new System.Windows.Forms.Button();
             this.pnlSort1 = new System.Windows.Forms.Panel();
@@ -114,12 +122,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExcute = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.cbbSpeed = new System.Windows.Forms.ComboBox();
-            this.cbbSize = new System.Windows.Forms.ComboBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.chboxSortAscending = new System.Windows.Forms.CheckBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             this.pnlArray.SuspendLayout();
             this.pnlColor.SuspendLayout();
@@ -147,9 +150,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label10.Location = new System.Drawing.Point(28, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.Size = new System.Drawing.Size(17, 13);
             this.label10.TabIndex = 3;
-            this.label10.Text = "Size:";
+            this.label10.Text = "N:";
             // 
             // btnRandoms
             // 
@@ -178,6 +181,21 @@
             this.panel2.Size = new System.Drawing.Size(580, 31);
             this.panel2.TabIndex = 6;
             // 
+            // chboxSortAscending
+            // 
+            this.chboxSortAscending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chboxSortAscending.AutoSize = true;
+            this.chboxSortAscending.Checked = true;
+            this.chboxSortAscending.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxSortAscending.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chboxSortAscending.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chboxSortAscending.Location = new System.Drawing.Point(477, 5);
+            this.chboxSortAscending.Name = "chboxSortAscending";
+            this.chboxSortAscending.Size = new System.Drawing.Size(97, 19);
+            this.chboxSortAscending.TabIndex = 3;
+            this.chboxSortAscending.Text = "Sort Ascending";
+            this.chboxSortAscending.UseVisualStyleBackColor = true;
+            // 
             // lbIconSmall
             // 
             this.lbIconSmall.BackColor = System.Drawing.Color.Transparent;
@@ -203,7 +221,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // demoToolStripMenuItem
@@ -244,6 +262,42 @@
             this.pnlColor.Name = "pnlColor";
             this.pnlColor.Size = new System.Drawing.Size(214, 87);
             this.pnlColor.TabIndex = 19;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label55.Location = new System.Drawing.Point(31, 55);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(46, 13);
+            this.label55.TabIndex = 21;
+            this.label55.Text = "NColor:";
+            // 
+            // cbbSpeed
+            // 
+            this.cbbSpeed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSpeed.ForeColor = System.Drawing.Color.Indigo;
+            this.cbbSpeed.FormattingEnabled = true;
+            this.cbbSpeed.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cbbSpeed.Location = new System.Drawing.Point(29, 21);
+            this.cbbSpeed.Name = "cbbSpeed";
+            this.cbbSpeed.Size = new System.Drawing.Size(117, 22);
+            this.cbbSpeed.TabIndex = 20;
+            this.cbbSpeed.Text = "10";
+            this.cbbSpeed.MouseHover += new System.EventHandler(this.cbbSpeed_MouseHover);
             // 
             // lbColor
             // 
@@ -290,6 +344,7 @@
             // pnlElements
             // 
             this.pnlElements.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlElements.Controls.Add(this.linkLabel3);
             this.pnlElements.Controls.Add(this.cbbSize);
             this.pnlElements.Controls.Add(this.linkLabel2);
             this.pnlElements.Controls.Add(this.btnElements);
@@ -301,12 +356,43 @@
             this.pnlElements.Size = new System.Drawing.Size(214, 87);
             this.pnlElements.TabIndex = 2;
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.LinkColor = System.Drawing.Color.Orange;
+            this.linkLabel3.Location = new System.Drawing.Point(48, 2);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(31, 15);
+            this.linkLabel3.TabIndex = 20;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Reset";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabel3.MouseHover += new System.EventHandler(this.linkLabel3_MouseHover);
+            // 
+            // cbbSize
+            // 
+            this.cbbSize.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSize.ForeColor = System.Drawing.Color.Indigo;
+            this.cbbSize.FormattingEnabled = true;
+            this.cbbSize.Items.AddRange(new object[] {
+            "10",
+            "15",
+            "20",
+            "25",
+            "30"});
+            this.cbbSize.Location = new System.Drawing.Point(28, 21);
+            this.cbbSize.Name = "cbbSize";
+            this.cbbSize.Size = new System.Drawing.Size(119, 22);
+            this.cbbSize.TabIndex = 19;
+            this.cbbSize.Text = "15";
+            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Orange;
-            this.linkLabel2.Location = new System.Drawing.Point(122, 2);
+            this.linkLabel2.Location = new System.Drawing.Point(84, 2);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(26, 15);
             this.linkLabel2.TabIndex = 4;
@@ -336,7 +422,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Orange;
-            this.linkLabel1.Location = new System.Drawing.Point(76, 2);
+            this.linkLabel1.Location = new System.Drawing.Point(117, 2);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(27, 15);
             this.linkLabel1.TabIndex = 3;
@@ -707,12 +793,31 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.demoToolStripMenuItem});
+            this.demoToolStripMenuItem,
+            this.optionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 580);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(700, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // optionToolStripMenuItem
+            // 
+            this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.threadQuestionToolStripMenuItem});
+            this.optionToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.optionToolStripMenuItem.Text = "Option";
+            // 
+            // threadQuestionToolStripMenuItem
+            // 
+            this.threadQuestionToolStripMenuItem.Checked = true;
+            this.threadQuestionToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.threadQuestionToolStripMenuItem.Name = "threadQuestionToolStripMenuItem";
+            this.threadQuestionToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.threadQuestionToolStripMenuItem.Text = "Thread Question";
+            this.threadQuestionToolStripMenuItem.Click += new System.EventHandler(this.threadQuestionToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -729,7 +834,6 @@
             this.pnlControls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlControls.Controls.Add(this.btnPause);
             this.pnlControls.Controls.Add(this.pnlSort1);
-            this.pnlControls.Controls.Add(this.btnExcute);
             this.pnlControls.Location = new System.Drawing.Point(580, 0);
             this.pnlControls.Name = "pnlControls";
             this.pnlControls.Size = new System.Drawing.Size(120, 580);
@@ -741,7 +845,7 @@
             this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPause.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPause.ForeColor = System.Drawing.Color.Green;
-            this.btnPause.Location = new System.Drawing.Point(-2, 28);
+            this.btnPause.Location = new System.Drawing.Point(-2, -1);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(119, 31);
             this.btnPause.TabIndex = 4;
@@ -768,9 +872,9 @@
             this.pnlSort1.Controls.Add(this.label14);
             this.pnlSort1.Controls.Add(this.label12);
             this.pnlSort1.Controls.Add(this.label1);
-            this.pnlSort1.Location = new System.Drawing.Point(0, 57);
+            this.pnlSort1.Location = new System.Drawing.Point(0, 29);
             this.pnlSort1.Name = "pnlSort1";
-            this.pnlSort1.Size = new System.Drawing.Size(115, 518);
+            this.pnlSort1.Size = new System.Drawing.Size(115, 549);
             this.pnlSort1.TabIndex = 5;
             // 
             // pnlSort2
@@ -788,7 +892,7 @@
             this.pnlSort2.Controls.Add(this.label32);
             this.pnlSort2.Controls.Add(this.label33);
             this.pnlSort2.Controls.Add(this.label34);
-            this.pnlSort2.Location = new System.Drawing.Point(0, 23);
+            this.pnlSort2.Location = new System.Drawing.Point(0, 22);
             this.pnlSort2.Name = "pnlSort2";
             this.pnlSort2.Size = new System.Drawing.Size(115, 417);
             this.pnlSort2.TabIndex = 18;
@@ -1064,86 +1168,10 @@
             this.label1.TabIndex = 1;
             this.label1.Tag = "Selection Sort_icon1small";
             // 
-            // btnExcute
+            // openFileDialog1
             // 
-            this.btnExcute.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcute.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcute.ForeColor = System.Drawing.Color.Green;
-            this.btnExcute.Location = new System.Drawing.Point(-2, -1);
-            this.btnExcute.Name = "btnExcute";
-            this.btnExcute.Size = new System.Drawing.Size(119, 31);
-            this.btnExcute.TabIndex = 0;
-            this.btnExcute.Text = "Excute";
-            this.btnExcute.UseVisualStyleBackColor = true;
-            this.btnExcute.Click += new System.EventHandler(this.btnExcute_Click);
-            // 
-            // cbbSpeed
-            // 
-            this.cbbSpeed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSpeed.ForeColor = System.Drawing.Color.Indigo;
-            this.cbbSpeed.FormattingEnabled = true;
-            this.cbbSpeed.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cbbSpeed.Location = new System.Drawing.Point(29, 21);
-            this.cbbSpeed.Name = "cbbSpeed";
-            this.cbbSpeed.Size = new System.Drawing.Size(117, 22);
-            this.cbbSpeed.TabIndex = 20;
-            this.cbbSpeed.Text = "10";
-            this.cbbSpeed.MouseHover += new System.EventHandler(this.cbbSpeed_MouseHover);
-            // 
-            // cbbSize
-            // 
-            this.cbbSize.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSize.ForeColor = System.Drawing.Color.Indigo;
-            this.cbbSize.FormattingEnabled = true;
-            this.cbbSize.Items.AddRange(new object[] {
-            "10",
-            "15",
-            "20",
-            "25",
-            "30"});
-            this.cbbSize.Location = new System.Drawing.Point(28, 21);
-            this.cbbSize.Name = "cbbSize";
-            this.cbbSize.Size = new System.Drawing.Size(119, 22);
-            this.cbbSize.TabIndex = 19;
-            this.cbbSize.Text = "15";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.Transparent;
-            this.label55.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label55.Location = new System.Drawing.Point(31, 55);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(46, 13);
-            this.label55.TabIndex = 21;
-            this.label55.Text = "NColor:";
-            // 
-            // chboxSortAscending
-            // 
-            this.chboxSortAscending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chboxSortAscending.AutoSize = true;
-            this.chboxSortAscending.Checked = true;
-            this.chboxSortAscending.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxSortAscending.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chboxSortAscending.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chboxSortAscending.Location = new System.Drawing.Point(477, 5);
-            this.chboxSortAscending.Name = "chboxSortAscending";
-            this.chboxSortAscending.Size = new System.Drawing.Size(97, 19);
-            this.chboxSortAscending.TabIndex = 3;
-            this.chboxSortAscending.Text = "Sort Ascending";
-            this.chboxSortAscending.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // ctrlsMainApp
             // 
@@ -1175,7 +1203,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnExcute;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Label label10;
@@ -1265,5 +1292,9 @@
         private System.Windows.Forms.ComboBox cbbSize;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.CheckBox chboxSortAscending;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem threadQuestionToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
